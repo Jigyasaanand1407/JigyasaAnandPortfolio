@@ -1,0 +1,11 @@
+// 1. Override default Bootstrap variables here (optional)
+// $primary: #6f42c1; 
+
+// 2. Import Bootstrap's source SCSS
+@import "bootstrap/scss/bootstrap";
+
+// 3. Add your custom portfolio styles below
+body {
+  -webkit-font-smoothing: antialiased;
+  background-color: #f8f9fa;
+}
