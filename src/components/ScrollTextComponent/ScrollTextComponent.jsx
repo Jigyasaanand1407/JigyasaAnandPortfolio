@@ -151,7 +151,7 @@ export default function ScrollTextComponent() {
   }, []);
 
   return (
-    <div className="container-fluid px-5">
+    <div className="container-fluid px-5 bg-black">
       <div className="scroll-text-page" ref={sectionRef}>
         <header className="scroll-hero">
           <div className="scroll-hero-inner">

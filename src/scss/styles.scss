@@ -7,6 +7,9 @@
   --text-muted: #ababab; /* Light grey muted text */
   --border-color: #2a2a30; /* Dark border lines */
   --nav-bg: rgba(10, 10, 12, 0.8);
+  --bg-btn-white: #ffffff38;
+  --text-sec: #f5f5f5;
+  --bg-trans-white: transparent;
 }
 
 /* 2. Light Theme (Only applies when toggled to light) */
@@ -17,6 +20,10 @@
   --text-muted: #727272; /* Subtitles / secondary text */
   --border-color: #e0e0e0; /* Borders and lines */
   --nav-bg: rgba(255, 255, 255, 0.8);
+  --bg-btn-white: #b5b5b633;
+  --text-sec: #333333;
+  --bg-trans-white: #fff;
+
 }
 
 // 2. Import Bootstrap's source SCSS

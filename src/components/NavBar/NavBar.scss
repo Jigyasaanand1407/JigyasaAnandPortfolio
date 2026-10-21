@@ -9,9 +9,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: transparent;
-  transition: padding 0.4s ease, background-color 0.4s ease, backdrop-filter 0.4s ease;
-  
+  background-color: var(--bg-trans-white, #fff) ;
+  transition:
+    padding 0.4s ease,
+    background-color 0.4s ease,
+    backdrop-filter 0.4s ease;
+
   /* -----------------------------------
    * LEFT SECTION (Logo + Text)
    * ----------------------------------- */
@@ -24,7 +27,7 @@
       height: 48px;
       display: flex;
       align-items: center;
-      
+
       .nav-logo {
         height: 100%;
         width: auto;
@@ -53,17 +56,19 @@
     /* Pill Button ("Hire me ->") */
     .hire-btn {
       display: flex;
-    align-items: center;
-    gap: 10px;
-    background-color: #ffffff38;
-    color: #ffffff;
-    padding: 12px 24px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-size: 20px;
-    font-weight: 700;
-    transition: all 0.3s ease;
-
+      align-items: center;
+      gap: 10px;
+      background-color: var(--bg-btn-white, #ffffff38);
+      color: var(--text-main, #000000);
+      padding: 12px 24px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: 700;
+      transition: all 0.3s ease;
+      span {
+        color: var(--text-main, #000000);
+      }
       .arrow {
         transition: transform 0.3s ease;
       }
@@ -175,7 +180,7 @@
   z-index: 2000;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
   border: 1px solid var(--border-color, rgba(0, 0, 0, 0.08));
-  
+
   /* Hidden State */
   opacity: 0;
   pointer-events: none;
@@ -225,7 +230,9 @@
       font-weight: 600;
       cursor: pointer;
       letter-spacing: -0.02em;
-      transition: transform 0.3s ease, opacity 0.3s ease;
+      transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
 
       &:hover {
         transform: translateX(8px);
@@ -247,4 +254,11 @@
       transform: scale(1.03);
     }
   }
+}
+.nav-logo {
+  transition: filter 0.3s ease;
+}
+
+.light-mode-logo {
+  filter: brightness(0);
 }
