@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import Layout from "./layout/layout";
+import Layout from "./layout/Layout";
 
 // Register the hook to avoid React version discrepancies
 gsap.registerPlugin(useGSAP);
