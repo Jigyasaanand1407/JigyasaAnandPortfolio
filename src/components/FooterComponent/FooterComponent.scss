@@ -196,20 +196,27 @@
 }
 .link-item a,
 .email a {
-  color: #fff !important;
+        color: var(--text-main, #000000) !important;
   text-decoration: none;
 }
 
 .link-item a {
-  color: #fff !important;
+        color: var(--text-main, #000000) !important;
   display: inline-flex;
   align-items: center;
 }
 a{
-  color: #fff !important;
+        color: var(--text-main, #000000) !important;
 
 }
 .link-item a:hover,
 .email a:hover {
-  color: #fff !important;
+        color: var(--text-main, #000000) !important;
+}
+.footer-logo {
+  transition: filter 0.3s ease;
+}
+
+.light-mode-logo {
+  filter: brightness(0);
 }

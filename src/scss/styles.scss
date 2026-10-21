@@ -296,3 +296,8 @@ html {
 img.dark-img{
   filter: brightness(0.8) contrast(1.1);
 }
+/* Convert selected SVGs to black in light mode */
+[data-theme="light"] .svg-black {
+  filter: brightness(0);
+  transition: filter 0.3s ease;
+}
