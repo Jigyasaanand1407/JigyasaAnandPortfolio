@@ -1,0 +1,89 @@
+.content {
+  position: absolute;
+  // color: #f1f1f1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 70%;
+  // margin: 134px 0;
+  margin: 200px 0 134px 0;
+  top: -70px;
+  left: 10%;
+  right: 10%;
+  // top: 0;
+  // height: 60%;
+  .heading {
+    font-size: 68px;
+    font-weight: 500;
+    max-width: 1020px;
+    line-height: 1.1em;
+    letter-spacing: -3px;
+    .text-gradient {
+      color: #8e4eef;
+      &:hover {
+        color: #b084f1;
+        text-decoration: underline;
+        transition: color 0.3s ease-in-out;
+      }
+    }
+  }
+  .sub-heading {
+    // font-size: 32px;
+    font-size: 24px;
+    font-weight: 400;
+    max-width: 670px;
+    // line-height: 1.1em;
+    // letter-spacing: -1px;
+    position: absolute;
+    right: -70px;
+    bottom: -100px;
+    bottom: -30px;
+    .text-gradient {
+      color: #fff;
+      background: #8e4eef;
+      padding: 0 10px;
+    }
+    @media (max-width: 1590px) and (min-width: 1490px) {
+      right: -120px;
+    }
+    @media (max-width: 1490px) and (min-width: 1380px) {
+      right: -140px;
+    }
+     @media (max-width: 1380px) {
+      bottom: -100px;
+    }
+    @media (max-width: 1280px) {
+      position: relative;
+      right: 0;
+      bottom: auto;
+    }
+  }
+}
+:root {
+  /* --- GIGA DISPLAY 320PX SYSTEM --- */
+  /* Mobile: 72px (4.5rem) | Scales at 14% of the screen width | Desktop Max: 320px (20rem) */
+  --fs-320: clamp(4.5rem, 14vw + 1rem, 20rem);
+}
+
+/* --- THE EXACT UTILITY CLASSES --- */
+
+/* Fluid Font Size */
+.fs-320 {
+  font-size: var(--fs-320);
+}
+
+/* Your Exact Font Weight */
+.fw-bold {
+  font-weight: 700;
+}
+
+/* Your Exact Tight Line-Height */
+.lh-ultra-tight {
+  line-height: 0.85;
+}
+
+/* Recommended layout helper for text this massive */
+.text-kill-overflow {
+  overflow: hidden;
+  word-break: break-all;
+}

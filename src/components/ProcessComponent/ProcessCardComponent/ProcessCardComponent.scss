@@ -1,0 +1,154 @@
+/* -----------------------------------
+ * Container & Card Base
+ * ----------------------------------- */
+.process-list-container {
+  width: 100%;
+  position: relative;
+}
+
+.process-card {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+  padding: 100px 0;
+  transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  cursor: pointer;
+&:last-child{
+    border-bottom: none;
+}
+  /* -----------------------------------
+   * Typography & Elements
+   * ----------------------------------- */
+  .number {
+    font-size: 3rem;
+    font-weight: 600;
+    transition: opacity 0.4s ease;
+  }
+
+  .process-name {
+    font-size: clamp(3.5rem, 7vw, 7.5rem);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+  }
+
+  .process-description {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    
+    /* Hidden by default when no card is hovered */
+    opacity: 0; 
+    transform: translateY(10px); 
+    
+    transition: opacity 0.4s ease, transform 0.4s ease;
+  }
+
+  /* -----------------------------------
+   * The Floating Hover Image Popup
+   * ----------------------------------- */
+  .hover-image-popup {
+    position: absolute;
+    top: 50%;
+    left: 45%; /* Centers it nicely between title and description */
+    transform: translate(-50%, -50%) scale(0.8) rotate(-3deg);
+    width: 340px;
+    height: 420px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    z-index: 10;
+    
+    /* CRITICAL: Prevents the image from blocking the mouse and causing hover glitches */
+    pointer-events: none; 
+    
+    transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+                transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  /* -----------------------------------
+   * State 1: When hovering over ANOTHER card
+   * ----------------------------------- */
+  &.is-muted {
+    .number,
+    .process-name {
+      opacity: 0.2; /* Dims the inactive title and number */
+    }
+
+    .process-description {
+      opacity: 0; /* Keeps inactive descriptions hidden */
+      transform: translateY(10px);
+    }
+  }
+
+  /* -----------------------------------
+   * State 2: When hovering over THIS card
+   * ----------------------------------- */
+  &.is-active {
+    .number,
+    .process-name {
+      opacity: 1;
+      transform: translateX(10px); /* Subtle nudge to the right */
+    }
+
+    /* Reveals the description smoothly */
+    .process-description {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Pops and rotates the image into view */
+    .hover-image-popup {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1) rotate(0deg);
+    }
+  }
+
+  /* -----------------------------------
+   * Mobile & Tablet Responsiveness
+   * ----------------------------------- */
+  @media (max-width: 991px) {
+    padding: 40px 0;
+
+    /* Hide the floating popup images on smaller screens */
+    .hover-image-popup {
+      display: none; 
+    }
+
+    /* On mobile, keep descriptions visible by default since there is no hover */
+    .process-description {
+      opacity: 0.7;
+      transform: none;
+      margin-top: 15px;
+    }
+
+    &.is-muted .process-description {
+      opacity: 0.3;
+      transform: none;
+    }
+  }
+}
+/* -----------------------------------
+   * Typography & Elements
+   * ----------------------------------- */
+  .number {
+    font-size: 3rem;
+    font-weight: 600;
+    opacity: 0.4; /* CHANGED: Starts dim by default */
+    transition: opacity 0.4s ease;
+  }
+
+  .process-name {
+    font-size: clamp(3.5rem, 7vw, 7.5rem);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1;
+    opacity: 0.4; /* CHANGED: Starts dim by default */
+    transition: opacity 0.4s ease, transform 0.4s ease;
+  } 

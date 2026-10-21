@@ -1,0 +1,264 @@
+.card-sm-screen {
+  display: flex !important;
+  align-items: center !important; /* Forces both inner sections to match height */
+  flex-direction: row !important;
+  // gap: 20px;
+  // padding: 20px;
+  border-radius: 40px !important;
+min-height: 500px; 
+  height: 75vh; 
+  font-size: 30px;
+  border-radius: 10px;
+  
+  display: flex !important;
+  align-items: center !important; 
+  flex-direction: row !important;
+  border-radius: 40px !important;
+  
+  /* ... keep your existing hover rules ... */
+  /* -------------------------------------------
+     * THE HOVER TRIGGERS
+     * When you hover anywhere on the main card...
+     * -------------------------------------------*/
+ 
+    /* 1. Change Left Background */
+    .card-content {
+      &.card-purple {
+        background-color: #f0ecff;
+        .badge {
+          &.badge-purple {
+            color: #5a3cc7;
+            background-color: #d4c8ff;
+          }
+        }
+        .action-btn {
+          background-color: #5a3cc7;
+          color: #fff;
+        }
+      }
+      &.card-orange {
+        background-color: #fff5e6;
+        .badge {
+          &.badge-orange {
+            color: #d49012;
+            background-color: #ffdea2;
+          }
+        }
+      }
+      &.card-green {
+        background-color: #e9ffee;
+        .badge {
+          &.badge-green {
+            color: #3ab454;
+            background-color: #b0ffc1;
+          }
+        }
+      }
+      //   &.card-purple {
+      //     background-color: #ffffff;
+      //   }
+    }
+
+    /* 2. Change Right Background */
+    .card-visual {
+      height: stretch !important;
+      &.card-purple {
+        background: #efadff;
+        background: radial-gradient(
+          circle,
+          rgba(239, 173, 255, 0.53) 0%,
+          rgba(218, 69, 252, 1) 0%,
+          rgba(119, 29, 253, 0.85) 100%
+        );
+      }
+      &.card-orange {
+        background: #ffe0ad;
+        background: radial-gradient(
+          circle,
+          rgba(255, 224, 173, 1) 0%,
+          rgba(253, 204, 29, 1) 0%,
+          rgba(252, 112, 69, 0.54) 100%
+        );
+      }
+
+      &.card-green {
+        background: #3ab454;
+        background: linear-gradient(
+          90deg,
+          rgba(58, 180, 84, 1) 0%,
+          rgba(50, 174, 97, 1) 50%,
+          rgba(23, 79, 44, 1) 100%
+        );
+      }
+      &.card-grey {
+        background: #757575;
+        background: linear-gradient(
+          90deg,
+          rgba(117, 117, 117, 1) 0%,
+          rgba(84, 84, 84, 1) 50%,
+          rgba(82, 82, 82, 1) 100%
+        );
+        
+      }
+    }
+
+    /* 3. Crossfade the Images */
+    .card-visual .default-img {
+      opacity: 0;
+    }
+    .card-visual .hover-img {
+      opacity: 1;
+    }
+
+}
+
+/* --- Left Section Styles --- */
+.card-content {
+  flex: 1; /* Takes up 50% width */
+  background-color: hsl(0, 0%, 98%); /* Default background color */
+  // border-radius: 24px;
+  border-top-left-radius: 40px;
+  border-bottom-left-radius: 40px;
+  padding: 40px;
+  transition: background-color 0.4s ease; /* Smooth color fade */
+  height: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  @media (max-width: 1080px){
+    border-radius: 40px;
+  }
+  @media (max-width: 767px) {
+    border-radius: 20px;
+    padding: 20px;
+  }
+  .sm-title {
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #ababab;
+    margin-top: 50px;
+    @media (max-width: 1200px) {
+    margin-top: 20px;
+    font-size: 12px;
+    }
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  .title {
+    font-size: 70px;
+    line-height: 100%;
+    // max-width: 320px;
+    @media (max-width: 1200px) {
+    font-size: 30px;
+    }
+  }
+  .description {
+    font-size: 24px;
+    @media (max-width: 1200px) {
+    font-size: 16px;
+    }
+  }
+  .badge {
+    font-size: 20px;
+    color: #727272;
+    width: fit-content;
+    border-radius: 30px;
+    font-weight: 600;
+    background-color: #ebebeb;
+    padding: 7px 16px;
+    white-space: pre-wrap;
+    @media (max-width: 1200px) {
+    font-size: 14px;
+    }
+  }
+  .action-btn {
+    /* 1. Base Circle State */
+    width: 50px; /* Fixed width to make it a perfect circle initially */
+    height: 50px;
+    background-color: #727272;
+    border: none;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0; /* Removed padding so the arrow stays perfectly centered */
+
+    overflow: hidden; /* CRITICAL: Hides the text outside the circle */
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1); /* Smooth width expansion */
+
+    .hover-content {
+      /* 2. Hidden Text State */
+      max-width: 0; /* Squish the text box to 0 pixels wide */
+      opacity: 0; /* Make it invisible */
+      white-space: nowrap; /* Prevent text from awkwardly wrapping to a new line */
+      font-size: 18px;
+      transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+
+    img {
+      height: 24px;
+      flex-shrink: 0; /* Ensure the arrow never gets squished */
+    }
+
+    /* 3. Hover Pill State */
+    &:hover {
+      width: 160px; /* Grow the button wide enough to hold the text */
+      padding: 0 24px; /* Add padding back to space things out nicely */
+      justify-content: space-between; /* Push text left, arrow right */
+
+      .hover-content {
+        max-width: 100px; /* Give the text room to exist */
+        opacity: 1; /* Fade it in */
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
+/* --- Right Section Styles --- */
+.card-visual {
+  flex: 1; /* Takes up 50% width */
+  background-color: #ffffff; /* Default background color */
+  // border-radius: 24px;
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 40px;
+  position: relative; /* Required to stack the images */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.4s ease; /* Smooth color fade */
+  // padding: 24px;
+@media (max-width: 1080px) {
+  border-radius: 40px;
+}
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transition: opacity 0.4s ease; /* Smooth image crossfade */
+  }
+
+  /* The starting image props up the container height */
+  .default-img {
+    opacity: 1;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* The hover image floats invisibly on top */
+  .hover-img {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+  }
+}
+.h-strech {
+  height: strech !important;
+}

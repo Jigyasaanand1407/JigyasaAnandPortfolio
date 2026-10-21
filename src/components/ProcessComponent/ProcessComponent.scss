@@ -1,0 +1,36 @@
+.process-page {
+  margin-top: 200px;
+  // padding: 100px;
+  .process-title {
+    font-size: 80px;
+    // color: #fff;
+    line-height: 90%;
+    white-space: nowrap;
+    @media (max-width: 990px) {
+      font-size: 42px;
+    }
+    @media (max-width: 490px) {
+      font-size: 32px;
+    }
+    @media (max-width: 410px) {
+      white-space: pre-wrap;
+    }
+    .text-gradient {
+      background: #8e4eef;
+      padding: 0 10px;
+      @media (max-width: 410px) {
+        background: transparent;
+      }
+    }
+    .text-gradient-pink {
+      background: #b92456;
+      padding: 0 10px;
+      @media (max-width: 410px) {
+        background: transparent;
+      }
+    }
+  }
+}
+.fw-200 {
+  font-weight: 200;
+}
