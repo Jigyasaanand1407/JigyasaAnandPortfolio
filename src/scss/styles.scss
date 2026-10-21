@@ -1,11 +1,291 @@
-// 1. Override default Bootstrap variables here (optional)
-// $primary: #6f42c1; 
+/* 1. Default Theme is now BLACK */
+:root,
+[data-theme="dark"] {
+  --bg-primary: #0a0a0c; /* Deep black background */
+  --bg-surface: #141418; /* Slightly lighter dark for cards */
+  --text-main: #ffffff; /* Pure white text */
+  --text-muted: #ababab; /* Light grey muted text */
+  --border-color: #2a2a30; /* Dark border lines */
+  --nav-bg: rgba(10, 10, 12, 0.8);
+}
+
+/* 2. Light Theme (Only applies when toggled to light) */
+[data-theme="light"] {
+  --bg-primary: #f4f4f2; /* Off-white background */
+  --bg-surface: #ffffff; /* Card / Section background */
+  --text-main: #0d0d0d; /* Almost black text */
+  --text-muted: #727272; /* Subtitles / secondary text */
+  --border-color: #e0e0e0; /* Borders and lines */
+  --nav-bg: rgba(255, 255, 255, 0.8);
+}
 
 // 2. Import Bootstrap's source SCSS
 @import "bootstrap/scss/bootstrap";
-
+// @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap");
+/* Your other global styles below */
+* {
+  // font-family: "Poppins", sans-serif;
+  font-family: "Syne", sans-serif;
+  font-optical-sizing: auto;
+  // font-weight: <weight>;
+  font-style: normal;
+}
 // 3. Add your custom portfolio styles below
 body {
   -webkit-font-smoothing: antialiased;
-  background-color: #f8f9fa;
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  transition:
+    background-color 0.4s ease,
+    color 0.4s ease;
+  margin: 0;
+}
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+:root {
+  /* --- 1. RESPONSIVE FONT SIZES --- */
+  --fs-10: 0.625rem;
+  --fs-12: 0.75rem;
+  --fs-14: 0.875rem;
+  --fs-16: 1rem;
+  --fs-20: clamp(1rem, 1.5vw + 0.5rem, 1.25rem);
+  --fs-22: clamp(1.125rem, 1.5vw + 0.625rem, 1.375rem);
+  --fs-24: clamp(1.125rem, 2vw + 0.625rem, 1.5rem);
+  --fs-36: clamp(1.75rem, 3vw + 1rem, 2.25rem);
+
+  /* Mega Display 100px (Scales from 48px on mobile up to 100px on desktop) */
+  --fs-100: clamp(3rem, 6vw + 1.5rem, 6.25rem);
+
+  /* Giga Display 200px (Scales from 64px on mobile up to 200px on desktop) */
+  --fs-200: clamp(4rem, 10vw + 2rem, 12.5rem);
+
+  /* --- 2. CORE SPACING SCALE (8px Grid) --- */
+  --space-4: 0.25rem;
+  --space-8: 0.5rem;
+  --space-12: 0.75rem;
+  --space-16: 1rem;
+  --space-24: 1.5rem;
+  --space-32: 2rem;
+  --space-48: 3rem;
+  --space-64: 4rem;
+  --space-96: 6rem;
+  --space-128: 8rem;
+}
+
+/* ==========================================================================
+   TYPOGRAPHY CLASSES
+   ========================================================================== */
+.fs-10 {
+  font-size: var(--fs-10);
+}
+.fs-12 {
+  font-size: var(--fs-12);
+}
+.fs-14 {
+  font-size: var(--fs-14);
+}
+.fs-16 {
+  font-size: var(--fs-16);
+}
+.fs-20 {
+  font-size: var(--fs-20);
+}
+.fs-22 {
+  font-size: var(--fs-22);
+}
+.fs-24 {
+  font-size: var(--fs-24);
+}
+.fs-36 {
+  font-size: var(--fs-36);
+}
+.fs-100 {
+  font-size: var(--fs-100);
+}
+.fs-200 {
+  font-size: var(--fs-200);
+}
+
+.lh-none {
+  line-height: 1;
+}
+.lh-tight {
+  line-height: 1.1;
+} /* Recommended for 100px/200px */
+.lh-snug {
+  line-height: 1.3;
+}
+.lh-normal {
+  line-height: 1.6;
+}
+
+.fw-light {
+  font-weight: 300;
+}
+.fw-regular {
+  font-weight: 400;
+}
+.fw-semibold {
+  font-weight: 600;
+}
+.fw-bold {
+  font-weight: 700;
+}
+.fw-black {
+  font-weight: 900;
+}
+
+/* ==========================================================================
+   PADDING UTILITIES
+   ========================================================================== */
+/* All sides (p) */
+.p-4 {
+  padding: var(--space-4);
+}
+.p-8 {
+  padding: var(--space-8);
+}
+.p-16 {
+  padding: var(--space-16);
+}
+.p-24 {
+  padding: var(--space-24);
+}
+.p-32 {
+  padding: var(--space-32);
+}
+.p-48 {
+  padding: var(--space-48);
+}
+.p-64 {
+  padding: var(--space-64);
+}
+
+/* Vertical (pt + pb) */
+.py-8 {
+  padding-top: var(--space-8);
+  padding-bottom: var(--space-8);
+}
+.py-16 {
+  padding-top: var(--space-16);
+  padding-bottom: var(--space-16);
+}
+.py-32 {
+  padding-top: var(--space-32);
+  padding-bottom: var(--space-32);
+}
+.py-64 {
+  padding-top: var(--space-64);
+  padding-bottom: var(--space-64);
+}
+.py-96 {
+  padding-top: var(--space-96);
+  padding-bottom: var(--space-96);
+}
+
+/* Horizontal (pl + pr) */
+.px-8 {
+  padding-left: var(--space-8);
+  padding-right: var(--space-8);
+}
+.px-16 {
+  padding-left: var(--space-16);
+  padding-right: var(--space-16);
+}
+.px-24 {
+  padding-left: var(--space-24);
+  padding-right: var(--space-24);
+}
+.px-32 {
+  padding-left: var(--space-32);
+  padding-right: var(--space-32);
+}
+.px-48 {
+  padding-left: var(--space-48);
+  padding-right: var(--space-48);
+}
+
+/* Individual Sides */
+.pt-16 {
+  padding-top: var(--space-16);
+}
+.pb-16 {
+  padding-bottom: var(--space-16);
+}
+.pb-32 {
+  padding-bottom: var(--space-32);
+}
+
+/* ==========================================================================
+   MARGIN UTILITIES
+   ========================================================================== */
+/* All sides (m) */
+.m-8 {
+  margin: var(--space-8);
+}
+.m-16 {
+  margin: var(--space-16);
+}
+.m-32 {
+  margin: var(--space-32);
+}
+
+/* Vertical (mt + mb) */
+.my-16 {
+  margin-top: var(--space-16);
+  margin-bottom: var(--space-16);
+}
+.my-32 {
+  margin-top: var(--space-32);
+  margin-bottom: var(--space-32);
+}
+.my-64 {
+  margin-top: var(--space-64);
+  margin-bottom: var(--space-64);
+}
+
+/* Horizontal / Auto Centering */
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+.mx-16 {
+  margin-left: var(--space-16);
+  margin-right: var(--space-16);
+}
+
+/* Bottom Margins (Crucial for spacing out content pieces) */
+.mb-4 {
+  margin-bottom: var(--space-4);
+}
+.mb-8 {
+  margin-bottom: var(--space-8);
+}
+.mb-12 {
+  margin-bottom: var(--space-12);
+}
+.mb-16 {
+  margin-bottom: var(--space-16);
+}
+.mb-24 {
+  margin-bottom: var(--space-24);
+}
+.mb-32 {
+  margin-bottom: var(--space-32);
+}
+.mb-48 {
+  margin-bottom: var(--space-48);
+}
+.mb-64 {
+  margin-bottom: var(--space-64);
+}
+.mb-128 {
+  margin-bottom: var(--space-128);
+}
+img.dark-img{
+  filter: brightness(0.8) contrast(1.1);
 }

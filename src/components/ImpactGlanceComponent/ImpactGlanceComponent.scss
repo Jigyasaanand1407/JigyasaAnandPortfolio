@@ -1,0 +1,19 @@
+.impact-glance {
+    padding: 100px 0;
+  .glance-heading {
+    font-size: clamp(3.5rem, 7vw, 7.5rem);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1;
+    transition:
+      opacity 0.4s ease,
+      transform 0.4s ease;
+    max-width: 700px;
+  }
+  .glance-text {
+    font-size: clamp(1.25rem, 1.5vw, 2.5rem);
+    font-weight: 400;
+    line-height: 1.25;
+    max-width: 800px;
+  }
+}

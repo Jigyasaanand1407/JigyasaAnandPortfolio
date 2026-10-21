@@ -1,0 +1,10 @@
+.clickable-text {
+  display: inline;
+}
+
+.clickable-word {
+  display: inline-block;
+  cursor: pointer;
+  transform-origin: center;
+  perspective: 400px;
+}
