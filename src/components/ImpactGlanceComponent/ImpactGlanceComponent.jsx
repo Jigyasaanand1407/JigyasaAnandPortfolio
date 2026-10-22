@@ -4,7 +4,7 @@ import "./ImpactGlanceComponent.scss";
 const impactCardData = [
   {
     cdNum: "01  —",
-    cdName: "2+",
+    cdName: "5+",
     cdDes: "Years of Experience",
     cdBgClass: "bg-blue",
   },

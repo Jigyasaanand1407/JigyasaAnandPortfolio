@@ -64,7 +64,7 @@ const ProjectComponentSmScreen = () => {
       <div className="container">
         <div className="text-sec">
          <p className="mb-0"> My <br /> <div className=" d-flex justify-content-space-between align-items-center"><span className="ms-5">Projects</span> 
-        <img src={arrowDown} alt="arrow-down" className="ms-auto d-none d-md-block"/></div></p>
+        <img src={arrowDown} alt="arrow-down" className="ms-auto d-none d-md-block svg-black"/></div></p>
         </div>
       </div>
       <div className="wrapper mb-5">
