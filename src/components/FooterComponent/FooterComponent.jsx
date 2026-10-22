@@ -74,7 +74,7 @@ const FooterComponent = () => {
           <img
             src={Logo}
             alt="logo"
-            className={`footer-logo ${theme === "light" ? "light-mode-logo" : ""}`}
+            className="footer-logo svg-black"
           />
 
           <div className="links">
