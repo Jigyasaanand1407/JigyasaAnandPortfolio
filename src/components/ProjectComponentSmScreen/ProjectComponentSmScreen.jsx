@@ -24,7 +24,6 @@ const projectData = [
     bgClassContent: "card-purple",
     bgClassImg: "card-purple",
     bgClasstag: "badge-purple",
-
     link: "/projects/healthcare",
   },
   {
