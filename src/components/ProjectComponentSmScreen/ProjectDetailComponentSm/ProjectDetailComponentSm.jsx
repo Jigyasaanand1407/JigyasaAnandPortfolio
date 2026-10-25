@@ -2,8 +2,9 @@ import React from 'react'
 import "./ProjectDetailComponentSm.scss"
 import arrow from "../../../assets/arrow-open.svg"; 
 import arrowRight from "../../../assets/arrow-right.svg"; 
+import { useNavigate } from "react-router-dom";
 
-const ProjectDetailComponentSm = ({ badge, title, description, image , hoverImage, bgClassContent, bgClassImg, bgClasstag}) => {
+const ProjectDetailComponentSm = ({ badge, title, description, image , hoverImage, bgClassContent, bgClassImg, bgClasstag, link}) => {
   return (
     <div className="card card-sm-screen d-block d-lg-flex" data-cursor-image={arrow}>
       <div className={`card-content ${bgClassContent}`}>
@@ -13,7 +14,8 @@ const ProjectDetailComponentSm = ({ badge, title, description, image , hoverImag
         <span className={`badge ${bgClasstag}`}>{badge}</span>
         <h4 className="sm-title">Brief</h4>
         <p className="description">{description}</p>
-        <button className="action-btn">
+        <button className="action-btn"
+  onClick={() => link && navigate(link)} >
           <span className="hover-content">View More</span><img src={arrowRight} alt="arrow" />
         </button>
       </div>

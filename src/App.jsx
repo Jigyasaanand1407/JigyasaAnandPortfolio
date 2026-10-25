@@ -1,15 +1,17 @@
+
 import { useRef } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import Layout from "./layout/Layout";
 
-// Register the hook to avoid React version discrepancies
+import Layout from "./layout/Layout";
+import CaseStudyPage from "./pages/CaseStudyPage/CaseStudyPage";
+
 gsap.registerPlugin(useGSAP);
 
-function App() {
+function HomePage() {
   const container = useRef();
 
-  // useGSAP automatically handles cleanup when the component unmounts
   useGSAP(
     () => {
       gsap.from(".hero-element", {
@@ -20,16 +22,29 @@ function App() {
         ease: "power3.out",
       });
     },
-    { scope: container },
+    { scope: container }
   );
 
   return (
-    <div
-      className=""
-      ref={container}
-    >
-      <Layout  />
+    <div ref={container}>
+      <Layout />
     </div>
+  );
+}
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+
+        <Route
+          path="/projects/healthcare"
+          element={< CaseStudyPage/>}
+        />
+
+      </Routes>
+    </BrowserRouter>
   );
 }
 

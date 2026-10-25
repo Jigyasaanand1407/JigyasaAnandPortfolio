@@ -13,7 +13,7 @@ import card4hover from "../../assets/card-4.svg";
 import card5 from "../../assets/card-5-bw.svg";
 import card5hover from "../../assets/card-5.svg";
 import ProjectDetailComponent from "./ProjectDetailComponent/ProjectDetailComponent";
-import arrowDown from "../../assets/arrow-down.svg"
+import arrowDown from "../../assets/arrow-down.svg";
 
 import arrowRight from "../../assets/arrow-right.svg";
 
@@ -31,11 +31,13 @@ const projectData = [
     bgClassContent: "card-purple",
     bgClassImg: "card-purple",
     bgClasstag: "badge-purple",
+    link: "/projects/healthcare",
   },
   {
     badge: "UX Design",
     title: "Streamlining the checkout process",
-    description: "A comprehensive digital healthcare platform that empowers patients to find specialists, book teleconsultations, and manage medical records seamlessly. By prioritizing an intuitive, accessible interface, the design minimizes user friction and unifies the fragmented healthcare journey into one unified app.",
+    description:
+      "A comprehensive digital healthcare platform that empowers patients to find specialists, book teleconsultations, and manage medical records seamlessly. By prioritizing an intuitive, accessible interface, the design minimizes user friction and unifies the fragmented healthcare journey into one unified app.",
     image: card2,
     hoverImage: card2hover,
     bgClassContent: "card-orange",
@@ -45,7 +47,8 @@ const projectData = [
   {
     badge: "Web Dev",
     title: "Building a scalable design system",
-    description: "A comprehensive digital healthcare platform that empowers patients to find specialists, book teleconsultations, and manage medical records seamlessly. By prioritizing an intuitive, accessible interface, the design minimizes user friction and unifies the fragmented healthcare journey into one unified app.",
+    description:
+      "A comprehensive digital healthcare platform that empowers patients to find specialists, book teleconsultations, and manage medical records seamlessly. By prioritizing an intuitive, accessible interface, the design minimizes user friction and unifies the fragmented healthcare journey into one unified app.",
     image: card5,
     hoverImage: card5hover,
     bgClassContent: "card-blue",
@@ -55,16 +58,18 @@ const projectData = [
   {
     badge: "Branding",
     title: "Reimagining the corporate identity",
-    description: "A comprehensive digital healthcare platform that empowers patients to find specialists, book teleconsultations, and manage medical records seamlessly. By prioritizing an intuitive, accessible interface, the design minimizes user friction and unifies the fragmented healthcare journey into one unified app.",
+    description:
+      "A comprehensive digital healthcare platform that empowers patients to find specialists, book teleconsultations, and manage medical records seamlessly. By prioritizing an intuitive, accessible interface, the design minimizes user friction and unifies the fragmented healthcare journey into one unified app.",
     image: card4,
     hoverImage: card4hover,
     bgClassContent: "card-grey",
     bgClassImg: "card-grey",
   },
-   {
+  {
     badge: "Branding",
     title: "Reimagining the corporate identity",
-    description: "A comprehensive digital healthcare platform that empowers patients to find specialists, book teleconsultations, and manage medical records seamlessly. By prioritizing an intuitive, accessible interface, the design minimizes user friction and unifies the fragmented healthcare journey into one unified app.",
+    description:
+      "A comprehensive digital healthcare platform that empowers patients to find specialists, book teleconsultations, and manage medical records seamlessly. By prioritizing an intuitive, accessible interface, the design minimizes user friction and unifies the fragmented healthcare journey into one unified app.",
     image: card3,
     hoverImage: card3hover,
     bgClassContent: "card-green",
@@ -118,8 +123,18 @@ const ProjectComponent = () => {
     <div ref={mainRef} className="mb-5">
       <div className="container">
         <div className="text-sec">
-         <p className="mb-0"> My <br /> <div className=" d-flex justify-content-space-between align-items-center"><span className="ms-5">Projects</span> 
-        <img src={arrowDown} alt="arrow-down" className="ms-auto d-none d-md-block svg-black"/></div></p>
+          <p className="mb-0">
+            {" "}
+            My <br />{" "}
+            <div className=" d-flex justify-content-space-between align-items-center">
+              <span className="ms-5">Projects</span>
+              <img
+                src={arrowDown}
+                alt="arrow-down"
+                className="ms-auto d-none d-md-block svg-black"
+              />
+            </div>
+          </p>
         </div>
       </div>
       <div className="wrapper mb-5">
@@ -136,6 +151,7 @@ const ProjectComponent = () => {
                 bgClassContent={project.bgClassContent}
                 bgClassImg={project.bgClassImg}
                 bgClasstag={project.bgClasstag}
+                link={project.link}
               />
             </div>
           ))}
@@ -143,8 +159,7 @@ const ProjectComponent = () => {
       </div>
       {/* <div className="spacer"></div> */}
       <div className="container d-flex justify-content-center flex-column align-items-center">
-        <h2 className="heading  mb-4 ">
-          Are you Ready to see More ?</h2>
+        <h2 className="heading  mb-4 ">Are you Ready to see More ?</h2>
         <button className="action-btn">
           <span className="hover-content">View All Projects</span>
           <img src={arrowRight} alt="arrow" />
