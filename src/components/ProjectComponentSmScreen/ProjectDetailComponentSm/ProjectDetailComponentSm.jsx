@@ -15,6 +15,7 @@ const ProjectDetailComponentSm = ({
   bgClasstag,
   link,
 }) => {
+  const navigate = useNavigate();
   return (
     <div
       className="card card-sm-screen d-block d-lg-flex"
