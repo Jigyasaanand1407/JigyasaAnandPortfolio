@@ -6,16 +6,16 @@
 <circle cx="446" cy="202" r="100" fill="url(#paint3_radial_118_1301)" fill-opacity="0.2"/>
 <circle cx="446" cy="202" r="50" fill="url(#paint4_radial_118_1301)" fill-opacity="0.4"/>
 <path d="M118.5 372C83.3 370 71.5 340.5 70 326C70 358.8 40.6667 372 26 374.5C58.4 376.5 71.1667 405.667 73.5 420C71.1 390 102.5 375.5 118.5 372Z" fill="url(#paint5_radial_118_1301)" fill-opacity="0.7"/>
-<rect x="439" y="102" width="420.5" height="849.5" fill="url(#pattern0_118_1301)"/>
+<rect x="416" y="47" width="355" height="717" fill="url(#pattern0_118_1301)"/>
 <g filter="url(#filter0_d_118_1301)">
-<path d="M207 167H666V829H207V167Z" fill="url(#pattern1_118_1301)" shape-rendering="crispEdges"/>
+<path d="M220 102H607V819H220V102Z" fill="url(#pattern1_118_1301)" shape-rendering="crispEdges"/>
 </g>
 </g>
 <defs>
 <pattern id="pattern0_118_1301" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image0_118_1301" transform="scale(0.00118906 0.000588582)"/>
+<use xlink:href="#image0_118_1301" transform="scale(0.00118906 0.000588726)"/>
 </pattern>
-<filter id="filter0_d_118_1301" x="200" y="152" width="507" height="710" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter0_d_118_1301" x="213" y="87" width="435" height="765" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
 <feOffset dx="17" dy="9"/>
@@ -26,7 +26,7 @@
 <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_118_1301" result="shape"/>
 </filter>
 <pattern id="pattern1_118_1301" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image1_118_1301" transform="scale(0.00108932 0.000755287)"/>
+<use xlink:href="#image1_118_1301" transform="scale(0.00108932 0.00058885)"/>
 </pattern>
 <radialGradient id="paint0_radial_118_1301" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(234.5 329.5) rotate(90) scale(224.5)">
 <stop stop-color="#E3DCF1"/>

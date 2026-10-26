@@ -43,6 +43,7 @@ const projectData = [
     bgClassContent: "card-orange",
     bgClasstag: "badge-orange",
     bgClassImg: "card-orange",
+    link: "/projects/checkout",
   },
   {
     badge: "Web Dev",
@@ -54,6 +55,7 @@ const projectData = [
     bgClassContent: "card-blue",
     bgClasstag: "badge-blue",
     bgClassImg: "card-blue",
+    link: "/projects/design-system",
   },
   {
     badge: "Branding",
@@ -64,6 +66,7 @@ const projectData = [
     hoverImage: card4hover,
     bgClassContent: "card-grey",
     bgClassImg: "card-grey",
+    link: "/projects/branding",
   },
   {
     badge: "Branding",
@@ -75,9 +78,9 @@ const projectData = [
     bgClassContent: "card-green",
     bgClasstag: "badge-green",
     bgClassImg: "card-green",
+    link: "/projects/digital-product",
   },
 ];
-// https://www.instagram.com/godaddy/p/DZ4--jODYmw/?img_index=3
 
 const ProjectComponent = () => {
   const mainRef = useRef(null);

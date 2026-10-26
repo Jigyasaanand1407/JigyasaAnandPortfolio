@@ -1,16 +1,17 @@
-
 import { useRef } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
+
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
 import Layout from "./layout/Layout";
+import HomePage from "./pages/HomePage/HomePage";
 import CaseStudyPage from "./pages/CaseStudyPage/CaseStudyPage";
 
 gsap.registerPlugin(useGSAP);
 
-function HomePage() {
-  const container = useRef();
+function AnimatedContent() {
+  const container = useRef(null);
 
   useGSAP(
     () => {
@@ -22,12 +23,12 @@ function HomePage() {
         ease: "power3.out",
       });
     },
-    { scope: container }
+    { scope: container },
   );
 
   return (
     <div ref={container}>
-      <Layout />
+      <Outlet />
     </div>
   );
 }
@@ -36,13 +37,13 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route element={<Layout />}>
+          <Route element={<AnimatedContent />}>
+            <Route path="/" element={<HomePage />} />
 
-        <Route
-          path="/projects/healthcare"
-          element={< CaseStudyPage/>}
-        />
-
+            <Route path="/projects/:projectId" element={<CaseStudyPage />} />
+          </Route>
+        </Route>
       </Routes>
     </BrowserRouter>
   );

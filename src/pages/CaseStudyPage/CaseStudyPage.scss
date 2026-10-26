@@ -1,0 +1,17 @@
+
+.case-study-page {
+  width: 100%;
+  overflow: hidden;
+
+  picture {
+    display: block;
+    width: 100%;
+  }
+
+  .case-study-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+}
