@@ -138,6 +138,9 @@ min-height: 500px;
     text-transform: uppercase;
     color: #ababab;
     margin-top: 50px;
+    @media (max-width: 1366px) {
+      font-size: 16px;
+    }
     @media (max-width: 1200px) {
     margin-top: 20px;
     font-size: 12px;
@@ -149,13 +152,20 @@ min-height: 500px;
   .title {
     font-size: 70px;
     line-height: 100%;
+    margin-bottom: 0;
     // max-width: 320px;
+     @media (max-width: 1440px) {
+      font-size: 50px;
+    }
     @media (max-width: 1200px) {
     font-size: 30px;
     }
   }
   .description {
     font-size: 24px;
+     @media (max-width: 1440px) {
+      font-size: 20px;
+    }
     @media (max-width: 1200px) {
     font-size: 16px;
     }
@@ -169,6 +179,9 @@ min-height: 500px;
     background-color: #ebebeb;
     padding: 7px 16px;
     white-space: pre-wrap;
+    @media (max-width: 1366px) {
+      font-size: 16px;
+    }
     @media (max-width: 1200px) {
     font-size: 14px;
     }

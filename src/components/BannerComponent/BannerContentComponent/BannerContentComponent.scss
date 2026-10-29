@@ -10,6 +10,16 @@
   top: -70px;
   left: 10%;
   right: 10%;
+  @media (max-width: 1366px) and (min-width: 1281px){
+     top: -120px;
+    }
+    @media (max-width: 1152px){
+     top: -120px;
+    }
+    @media screen and (min-width: 991px) and (max-height: 720px){
+     top: -110px;
+
+    }
   // top: 0;
   // height: 60%;
   .heading {
@@ -38,10 +48,26 @@
     right: -70px;
     bottom: -100px;
     bottom: -30px;
+    @media (max-width: 1024px){
+      font-size: 20px;
+    }
+    @media (max-width: 800px){
+      font-size: 16px;
+      margin-top: 20px;
+    }
+    @media screen and (min-width: 991px) and (max-height: 800px){
+      
+      font-size: 18px;
+    }
     .text-gradient {
       color: #fff;
       background: #8e4eef;
       padding: 0 10px;
+    }
+    
+   @media (max-width: 1600px) {
+         right: -110px;
+    bottom: -70px;
     }
     @media (max-width: 1590px) and (min-width: 1490px) {
       right: -120px;
@@ -51,6 +77,10 @@
     }
      @media (max-width: 1380px) {
       bottom: -100px;
+    }
+    @media (max-width: 1366px) {
+      right: -120px;
+    bottom: -50px;
     }
     @media (max-width: 1280px) {
       position: relative;
@@ -70,6 +100,21 @@
 /* Fluid Font Size */
 .fs-320 {
   font-size: var(--fs-320);
+  @media (max-width: 1366px){
+    font-size: 180px;
+  }
+  @media (max-width: 1152px){
+    font-size: 150px;
+  }
+   @media (max-width: 800px){
+    font-size: 100px;
+  }
+  @media screen and (min-width: 991px) and (max-height: 800px) {
+    font-size: 160px;
+  }
+  @media screen and (min-width: 991px) and (max-height: 720px) {
+    font-size: 140px;
+  }
 }
 
 /* Your Exact Font Weight */
