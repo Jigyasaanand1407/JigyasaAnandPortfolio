@@ -23,7 +23,7 @@ const caseStudies = {
 
   checkout: {
     title: "Checkout Experience",
-    image: checkoutCaseStudy,
+    // image: checkoutCaseStudy,
   },
 };
 
