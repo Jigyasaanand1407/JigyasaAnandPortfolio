@@ -34,10 +34,10 @@ const projectData = [
     link: "/projects/healthcare",
   },
   {
-    badge: "UX Design",
-    title: "Streamlining the checkout process",
+    badge: "UX Design-Systems Assessment & Requirements Gathering",
+    title: "Task Management Modernization",
     description:
-      "A comprehensive digital healthcare platform that empowers patients to find specialists, book teleconsultations, and manage medical records seamlessly. By prioritizing an intuitive, accessible interface, the design minimizes user friction and unifies the fragmented healthcare journey into one unified app.",
+      "An assessment and requirements definition project to modernize a legacy HR intranet and task management system. The initiative identifies critical functionality gaps in task scheduling, permissions management, resource organization, and communication to guide the implementation of a new, improved system.",
     image: card2,
     hoverImage: card2hover,
     bgClassContent: "card-orange",
@@ -49,7 +49,7 @@ const projectData = [
     badge: "Web Dev",
     title: "Building a scalable design system",
     description:
-      "A comprehensive digital healthcare platform that empowers patients to find specialists, book teleconsultations, and manage medical records seamlessly. By prioritizing an intuitive, accessible interface, the design minimizes user friction and unifies the fragmented healthcare journey into one unified app.",
+      "A comprehensive component library and design system built to ensure visual consistency and accelerate development workflows. By standardizing UI elements and interaction patterns, it bridges the gap between design and engineering, empowering teams to build accessible, cohesive products at scale.",
     image: card5,
     hoverImage: card5hover,
     bgClassContent: "card-blue",
@@ -58,10 +58,10 @@ const projectData = [
     link: "/projects/design-system",
   },
   {
-    badge: "Branding",
-    title: "Reimagining the corporate identity",
+    badge: "Web, Mobile & Wearable Dev",
+    title: "Cross-Platform Photographer Booking",
     description:
-      "A comprehensive digital healthcare platform that empowers patients to find specialists, book teleconsultations, and manage medical records seamlessly. By prioritizing an intuitive, accessible interface, the design minimizes user friction and unifies the fragmented healthcare journey into one unified app.",
+      "A unified booking ecosystem that allows users to discover, schedule, and manage professional photographers seamlessly across web, mobile, and smartwatch platforms. The application delivers real-time availability, instant notifications, and a frictionless scheduling experience on any device.",
     image: card4,
     hoverImage: card4hover,
     bgClassContent: "card-grey",
@@ -69,10 +69,10 @@ const projectData = [
     link: "/projects/branding",
   },
   {
-    badge: "Branding",
-    title: "Reimagining the corporate identity",
+    badge: "UI/UX Design / Workflow Optimization",
+    title: "Digital Signature Flow Redesig",
     description:
-      "A comprehensive digital healthcare platform that empowers patients to find specialists, book teleconsultations, and manage medical records seamlessly. By prioritizing an intuitive, accessible interface, the design minimizes user friction and unifies the fragmented healthcare journey into one unified app.",
+      "A complete end-to-end redesign of the user journey for an India-based digital signature platform. The revamped workflow significantly reduces user friction, streamlines document processing, and ensures a secure, compliant, and intuitive signing experience for both individual and enterprise users.",
     image: card3,
     hoverImage: card3hover,
     bgClassContent: "card-green",
