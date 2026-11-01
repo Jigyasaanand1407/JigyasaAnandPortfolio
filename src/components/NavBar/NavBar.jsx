@@ -3,6 +3,7 @@ import "./NavBar.scss";
 import defaultLogo from "../../assets/logo-full-sq.svg";
 import scrolledLogo from "../../assets/logo-sq.svg";
 import { useTheme } from "../../hooks/useTheme";
+import { useNavigate } from "react-router-dom";
 
 const NavBar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -10,7 +11,7 @@ const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const { theme, toggleTheme } = useTheme();
-
+  const navigate = useNavigate();
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 100);
@@ -83,13 +84,19 @@ const NavBar = () => {
         </button>
 
         <div className="popup-links">
-          <div className="item" onClick={() => setIsMenuOpen(false)}>
+          <div className="item" onClick={() => setIsMenuOpen(true)}>
             Home
           </div>
           <div className="item" onClick={() => setIsMenuOpen(false)}>
             Work
           </div>
-          <div className="item" onClick={() => setIsMenuOpen(false)}>
+          <div
+            className="item"
+            onClick={() => {
+              setIsMenuOpen(false);
+              navigate("/aboutUs");
+            }}
+          >
             About
           </div>
           <div className="item" onClick={() => setIsMenuOpen(false)}>

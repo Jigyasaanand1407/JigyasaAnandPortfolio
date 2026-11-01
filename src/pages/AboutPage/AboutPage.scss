@@ -1,0 +1,43 @@
+.about-us-page {
+    margin-bottom: 200px;
+  .fs-200 {
+    font-size: 200px;
+    margin-top: 200px;
+  }
+  .intro-sec {
+    margin-top: 100px;
+    img.my-pic {
+      border-radius: 10px;
+    }
+    .intro-heading {
+      letter-spacing: -0.015em;
+      font-size: clamp(26px, 3vw, 44px);
+      line-height: 1.15;
+      text-wrap: pretty;
+      margin: 0px 0px 28px;
+    }
+    .intro-description {
+      color: #b9b4ac;
+      max-width: 60ch;
+      font-size: 20px;
+      line-height: 1.55;
+      text-wrap: pretty;
+      margin: 0px 0px 20px;
+    }
+    .toolkit {
+      .intro-description {
+        font-size: 16px;
+        border-bottom: 1px solid #2b2b2b;
+        padding-bottom: 10px;
+        border-radius: 0;
+      }
+      ul {
+        list-style-type: none;
+        padding-left: 0;
+        li {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}

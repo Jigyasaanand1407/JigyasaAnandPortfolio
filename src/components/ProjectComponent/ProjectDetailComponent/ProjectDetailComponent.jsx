@@ -20,7 +20,9 @@ const ProjectDetailComponent = ({
   const navigate = useNavigate();
 
   return (
-    <div className="card d-block d-lg-flex" data-cursor-image={arrow}>
+    <div className="card d-block d-lg-flex" data-cursor-image={arrow} 
+          onClick={() => link && navigate(link)}
+          disabled={!link}>
       <div className={`card-content ${bgClassContent}`}>
         <h4 className="sm-title">Project Name</h4>
         <h2 className="title">{title}</h2>
@@ -33,8 +35,6 @@ const ProjectDetailComponent = ({
 
         <button
           className="action-btn"
-          onClick={() => link && navigate(link)}
-          disabled={!link}
         >
           <span className="hover-content">View More</span>
           <img src={arrowRight} alt="" />

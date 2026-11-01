@@ -20,6 +20,8 @@ const ProjectDetailComponentSm = ({
     <div
       className="card card-sm-screen d-block d-lg-flex"
       data-cursor-image={arrow}
+          onClick={() => link && navigate(link)}
+          disabled={!link}
     >
       <div className={`card-content ${bgClassContent}`}>
         <h4 className="sm-title">Project Name</h4>
@@ -28,8 +30,7 @@ const ProjectDetailComponentSm = ({
         <span className={`badge ${bgClasstag}`}>{badge}</span>
         <h4 className="sm-title">Brief</h4>
         <p className="description">{description}</p>
-        <button className="action-btn"onClick={() => link && navigate(link)}
-          disabled={!link}>
+        <button className="action-btn">
           <span className="hover-content">View More</span>
           <img src={arrowRight} alt="arrow" />
         </button>

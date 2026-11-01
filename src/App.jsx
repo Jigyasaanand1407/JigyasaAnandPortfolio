@@ -7,6 +7,7 @@ import { useGSAP } from "@gsap/react";
 import Layout from "./layout/Layout";
 import HomePage from "./pages/HomePage/HomePage";
 import CaseStudyPage from "./pages/CaseStudyPage/CaseStudyPage";
+import AboutPage from "./pages/AboutPage/AboutPage";
 
 gsap.registerPlugin(useGSAP);
 
@@ -42,6 +43,7 @@ function App() {
             <Route path="/" element={<HomePage />} />
 
             <Route path="/projects/:projectId" element={<CaseStudyPage />} />
+            <Route path="/aboutUs" element={<AboutPage />} />
           </Route>
         </Route>
       </Routes>
