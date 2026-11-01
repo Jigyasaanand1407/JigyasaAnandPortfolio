@@ -8,6 +8,8 @@ import card3 from "../../assets/card-3-bw.svg";
 import card3hover from "../../assets/card-3.svg";
 import card4 from "../../assets/card-4-bw.svg";
 import card4hover from "../../assets/card-4.svg";
+import card5 from "../../assets/card-5-bw.svg";
+import card5hover from "../../assets/card-5.svg";
 import ProjectDetailComponentSm from "./ProjectDetailComponentSm/ProjectDetailComponentSm";
 import arrowDown from "../../assets/arrow-down.svg";
 import arrowRight from "../../assets/arrow-right.svg";
