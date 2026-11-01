@@ -17,7 +17,7 @@ const AboutPage = () => {
               className="img-fluid my-pic"
             />
           </div>
-          <div className="col-md-6 px-4">
+          <div className="col-md-6 px-4 mt-5 mt-md-0">
             <div className="intro-heading">
               Hi, I'm Jigyasa. I'm a UI/UX Designer and Front-End Developer
               based in New Delhi, India.
@@ -64,7 +64,7 @@ const AboutPage = () => {
                 Tools & Technologies
               </div>
               <div className="row">
-                <div className="col-md-6">
+                <div className="col-sm-6">
                   <ul>
                     <li>HTML</li>
                     <li>CSS</li>
@@ -74,7 +74,7 @@ const AboutPage = () => {
                     <li>Angular</li>
                   </ul>
                 </div>
-                <div className="col-md-6">
+                <div className="col-sm-6">
                   <ul>
                     <li>Figma</li>
                     <li>GSAP</li>
