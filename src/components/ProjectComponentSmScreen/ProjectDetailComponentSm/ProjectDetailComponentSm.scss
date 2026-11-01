@@ -53,6 +53,33 @@ min-height: 500px;
             background-color: #b0ffc1;
           }
         }
+        .action-btn {
+          background-color: #3ab454;
+          color: #fff;
+        }
+      }
+      &.card-blue {
+        background-color: #e9eeff;
+        .badge {
+          &.badge-blue {
+            color: #3a56b4;
+            background-color: #b0ccff;
+          }
+        }
+        .action-btn {
+          background-color: #3a56b4;
+          color: #fff;
+        }
+      }
+      &.card-grey {
+        .badge {
+          &.badge-blue {
+          }
+        }
+        .action-btn {
+          // background-color: #3a56b4;
+          color: #fff;
+        }
       }
       //   &.card-purple {
       //     background-color: #ffffff;
@@ -90,6 +117,15 @@ min-height: 500px;
           rgba(23, 79, 44, 1) 100%
         );
       }
+      &.card-blue {
+        background: #3a56b4;
+        background: linear-gradient(
+          90deg,
+          rgb(58, 107, 180) 0%,
+          rgb(50, 73, 174) 50%,
+          rgb(35, 23, 79) 100%
+        );
+      }
       &.card-grey {
         background: #757575;
         background: linear-gradient(
@@ -98,7 +134,6 @@ min-height: 500px;
           rgba(84, 84, 84, 1) 50%,
           rgba(82, 82, 82, 1) 100%
         );
-        
       }
     }
 
