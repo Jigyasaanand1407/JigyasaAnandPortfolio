@@ -21,7 +21,7 @@ const BannerContentComponent = () => {
         <div className="one">code</div>
       </div>
       <div className="sub-heading">
-        I’m Jigyasa Anand, a hybrid UI/UX Designer and Software Engineer. I don’t just design pretty interfaces—I architect <span className="text-gradient"> scalable, high-performance digital products </span> for brands that refuse to blend in.
+        I’m Jigyasa Anand, a hybrid UI/UX Designer and Software Engineer. I don’t just design pretty interfaces—I architect <span className="text-gradient">scalable, high-performance digital products</span> for brands that refuse to blend in.
       </div>
     </div>
   );

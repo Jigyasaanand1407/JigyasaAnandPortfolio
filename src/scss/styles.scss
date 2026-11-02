@@ -23,7 +23,6 @@
   --bg-btn-white: #b5b5b633;
   --text-sec: #333333;
   --bg-trans-white: #fff;
-
 }
 
 // 2. Import Bootstrap's source SCSS
@@ -293,7 +292,7 @@ html {
 .mb-128 {
   margin-bottom: var(--space-128);
 }
-img.dark-img{
+img.dark-img {
   filter: brightness(0.8) contrast(1.1);
 }
 /* Convert selected SVGs to black in light mode */
@@ -302,7 +301,10 @@ img.dark-img{
   transition: filter 0.3s ease;
 }
 @media (max-width: 767px) {
-    .px-5{
+  .px-5 {
     padding: 0 20px !important;
+  }
 }
+.mt-200 {
+  margin-top: 200px;
 }

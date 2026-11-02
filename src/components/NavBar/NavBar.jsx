@@ -87,7 +87,13 @@ const NavBar = () => {
           <div className="item" onClick={() => setIsMenuOpen(true)}>
             Home
           </div>
-          <div className="item" onClick={() => setIsMenuOpen(false)}>
+          <div
+            className="item"
+            onClick={() => {
+              setIsMenuOpen(false);
+              navigate("/work");
+            }}
+          >
             Work
           </div>
           <div
