@@ -5,7 +5,7 @@ import Healtthcare from "../../assets/project-images/Healthcare-web.svg"
 const ProjectDataInfo = [
   {
     date: "Aug 31, 2026",
-    projectName: "Razorpay Sprint26: The Future of Payments.",
+    projectName: "JivoCare: Patient-First Healthcare.",
     imgUrl: Healtthcare,
     technology: "Web and Mobile, UI UX Design",
     description: "A comprehensive digital healthcare platform that empowers patients to find specialists, book teleconsultations, and manage medical records seamlessly. By prioritizing an intuitive, accessible interface, the design minimizes user friction and unifies the fragmented healthcare journey into one unified app.",
@@ -13,7 +13,7 @@ const ProjectDataInfo = [
   },
   {
     date: "Aug 31, 2026",
-    projectName: "Razorpay Sprint26: The Future of Payments.",
+    projectName: "JivoCare: Patient-First Healthcare.",
     imgUrl: Healtthcare,
     technology: "Web and Mobile, UI UX Design",
     description: "A comprehensive digital healthcare platform that empowers patients to find specialists, book teleconsultations, and manage medical records seamlessly. By prioritizing an intuitive, accessible interface, the design minimizes user friction and unifies the fragmented healthcare journey into one unified app.",
@@ -21,7 +21,7 @@ const ProjectDataInfo = [
   },
   {
     date: "Aug 31, 2026",
-    projectName: "Razorpay Sprint26: The Future of Payments.",
+    projectName: "JivoCare: Patient-First Healthcare.",
     imgUrl: Healtthcare,
     technology: "Web and Mobile, UI UX Design",
     description: "A comprehensive digital healthcare platform that empowers patients to find specialists, book teleconsultations, and manage medical records seamlessly. By prioritizing an intuitive, accessible interface, the design minimizes user friction and unifies the fragmented healthcare journey into one unified app.",
