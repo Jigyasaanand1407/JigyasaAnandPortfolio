@@ -22,7 +22,7 @@ const ProjectCardComonent = ({date, projectName, imgUrl, technology, description
               />
             </figure>
           </a>
-          <div class="card-blog__by">y
+          <div class="card-blog__by">
             <small>Work</small>
 
             <div class="users-credits">
