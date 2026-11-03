@@ -42,7 +42,12 @@ const NavBar = () => {
     <>
       <header className={`navbar-custom ${isScrolled ? "scrolled" : ""}`}>
         <div className="nav-left">
-          <div className="logo-box">
+          <div
+            className="logo-box cursor-pointer"
+            onClick={() => {
+              navigate("/");
+            }}
+          >
             <img
               src={logoToDisplay}
               alt="logo"
@@ -84,7 +89,13 @@ const NavBar = () => {
         </button>
 
         <div className="popup-links">
-          <div className="item" onClick={() => setIsMenuOpen(true)}>
+          <div
+            className="item"
+            onClick={() => {
+              setIsMenuOpen(true);
+              navigate("/");
+            }}
+          >
             Home
           </div>
           <div

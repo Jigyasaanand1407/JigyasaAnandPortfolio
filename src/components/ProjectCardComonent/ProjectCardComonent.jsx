@@ -2,7 +2,7 @@ import "./ProjectCardComonent.scss";
 
 const ProjectCardComonent = ({date, projectName, imgUrl, technology, description, openLink}) => {
   return (
-    <div className="project-card-component mb-5">
+    <div className="project-card-component">
       <div class="card-blog">
         <div class="card-blog__header">
           <p>{date}</p>
@@ -23,9 +23,9 @@ const ProjectCardComonent = ({date, projectName, imgUrl, technology, description
             </figure>
           </a>
           <div class="card-blog__by">
-            <small>by</small>
+            <small>Work</small>
 
-            <div class="users-credits ">
+            <div class="users-credits ps-1">
               <ul class="users-credits__details mb-0">
                 <li>
                   <div class="users-credits__item">
@@ -35,13 +35,13 @@ const ProjectCardComonent = ({date, projectName, imgUrl, technology, description
                         href="/razorpaydesign/"
                         aria-label="Razorpay Design"
                       >
-                        <img
+                        {/* <img
                           class="avatar-name__img"
                           src="https://assets.awwwards.com/awards/media/cache/thumb_user_70/avatar/2790936/69ef51a21b8ab389542518.png"
                           width="32"
                           height="32"
                           alt=""
-                        />
+                        /> */}
                         <figcaption class="avatar-name__name">
                           <strong class="link-underlined ">
                             {technology}
