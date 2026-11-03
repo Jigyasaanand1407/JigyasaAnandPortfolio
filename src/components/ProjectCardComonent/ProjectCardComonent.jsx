@@ -25,8 +25,8 @@ const ProjectCardComonent = ({date, projectName, imgUrl, technology, description
           <div class="card-blog__by">
             <small>Work</small>
 
-            <div class="users-credits ps-1">
-              <ul class="users-credits__details mb-0">
+            <div class="users-credits">
+              <ul class="users-credits__details mb-0 ps-1">
                 <li>
                   <div class="users-credits__item">
                     <figure class="avatar-name mb-0">
