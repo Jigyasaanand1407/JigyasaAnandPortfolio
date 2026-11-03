@@ -7,13 +7,13 @@ const ProjectCardComonent = ({date, projectName, imgUrl, technology, description
         <div class="card-blog__header">
           <p>{date}</p>
           <h3 class="card-blog__title">
-            <a href="/razorpay-sprint26-the-future-of-payments.html">
+            <a href="">
               {projectName}
             </a>
           </h3>
         </div>
         <div class="card-blog__info">
-          <a href="/razorpay-sprint26-the-future-of-payments.html">
+          <a href="">
             <figure class="card-blog__figure">
               <img
                 class="card-blog__media"
