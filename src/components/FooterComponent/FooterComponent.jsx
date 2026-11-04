@@ -70,31 +70,47 @@ const FooterComponent = () => {
         </div>
       </div>
       <div className="footer-section">
-        <div className="sec-logo mb-5">
-          <img
-            src={Logo}
-            alt="logo"
-            className="footer-logo svg-black"
-          />
-
-          <div className="links">
-            <a
-              href="https://www.linkedin.com/in/jigyasaanand1407/?isSelfProfile=true"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div className="link-item">
-                LinkedIn
-                <img src={openArrow} alt="open" height={20} className="ms-3 svg-black" />
-              </div>
-            </a>
+        <div className="footer-sec-top d-block d-lg-flex align-items-center justify-content-between">
+          <div>
+            <div className="sm-text mb-5">LET'S CONNECT THE DOTS</div>
+            <div className="lg-text">
+              Your next idea, <br />
+              <span className="fw-bold">Our next conversation</span>
+            </div>
           </div>
+          <span class="contact-arrow">↗</span>
         </div>
-        <h1 className="email">
-          <a href="mailto:Jigyasaanand14n@gmail.com">
-            Jigyasaanand14n@gmail.com
-          </a>
-        </h1>
+        <div className="sec-logo mb-5">
+          <img src={Logo} alt="logo" className="footer-logo svg-black" />
+
+          <ul className="links">
+            <li>
+              <a
+                href="https://www.linkedin.com/in/jigyasaanand1407/?isSelfProfile=true"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="link-item">
+                  LinkedIn
+                  <span className="ms-1">↗</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="mailto:Jigyasaanand14n@gmail.com" target="_blank">
+                <div className="link-item">
+                  Email
+                  <span className="ms-1">↗</span>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div className=" d-block d-md-flex justify-content-between">
+          <p className="mb-0"> © 2026 Jigyasa Anand </p>
+          <p className="mb-0">New Delhi, India ·  interfacedecoded.in </p>
+          <p className="mb-0">Back to top ↑</p>
+        </div>
       </div>
     </div>
   );

@@ -14,7 +14,7 @@ const BannerComponent = () => {
     let curY = 0;
     let tgX = 0;
     let tgY = 0;
-    let animationFrameId; 
+    let animationFrameId;
 
     const move = () => {
       curX += (tgX - curX) / 20;
@@ -39,14 +39,22 @@ const BannerComponent = () => {
 
   return (
     <div className="banner">
-      
       {/* 1. The Multi-Color Interactive Background */}
       <div className="gradient-bg">
         <svg xmlns="http://www.w3.org/2000/svg" className="svg-filter">
           <defs>
             <filter id="goo">
-              <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
-              <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo" />
+              <feGaussianBlur
+                in="SourceGraphic"
+                stdDeviation="10"
+                result="blur"
+              />
+              <feColorMatrix
+                in="blur"
+                mode="matrix"
+                values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8"
+                result="goo"
+              />
               <feBlend in="SourceGraphic" in2="goo" />
             </filter>
           </defs>
@@ -61,7 +69,6 @@ const BannerComponent = () => {
         </div>
       </div>
 
-      <NavBar />
       <BannerContentComponent />
     </div>
   );

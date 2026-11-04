@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title">
+  <title id="title">EngineersInsight guide robot</title>
+  <defs>
+    <linearGradient id="shell" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#a9c7ff"/><stop offset=".42" stop-color="#6d9cf4"/><stop offset="1" stop-color="#3568d5"/></linearGradient>
+    <linearGradient id="body" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#94bbff"/><stop offset=".45" stop-color="#5689ee"/><stop offset="1" stop-color="#2d5ec7"/></linearGradient>
+    <linearGradient id="screen" x1="0" y1="0" x2=".8" y2="1"><stop stop-color="#365384"/><stop offset=".45" stop-color="#20385f"/><stop offset="1" stop-color="#16254a"/></linearGradient>
+    <filter id="eye-glow" x="-70%" y="-100%" width="240%" height="300%"><feGaussianBlur stdDeviation="2.2" result="glow"/><feMerge><feMergeNode in="glow"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <g shape-rendering="crispEdges" stroke="#1d2c73" stroke-width="3" stroke-linejoin="round">
+    <path fill="url(#shell)" d="M28 39h8v-8h9v-6h11v-5h25v5h12v6h8v8h8v12h5v22h-5v11h-9v7h-9v7H37v-7h-9v-7h-8V72h-5V53h5V42h8z"/>
+    <path fill="#7eabff" d="M31 42h9v-8h10v-6h12v-5h17v5h11v6h9v8h8v9h-7v-5h-9v-6H78v-6H54v6H42v6H31z" stroke="none"/>
+    <path fill="#386ce0" d="M22 66h-6v10h5v9h9v8h11v5h49v-5h11v-8h9V74h5v-9h-6v12h-8v8H90v7H40v-7H29v-8h-7z" stroke="none"/>
+    <path fill="#1b2b52" d="M42 48h45v-4h9v5h7v29h-7v5h-8v4H41v-4h-8v-5h-7V50h7v-6h9z"/>
+    <path fill="url(#screen)" d="M36 51h58v-3h4v28h-4v5H36v-5h-5V51z" stroke="none"/>
+    <path fill="#b5d3ff" opacity=".24" d="M36 51h58v7H36z" stroke="none"/>
+    <path fill="none" stroke="#81e8ed" stroke-width="4" stroke-linecap="round" filter="url(#eye-glow)" d="M47 63l4 4h5l4-4m12 0 4 4h5l4-4"/>
+    <path fill="url(#body)" d="M47 89h36v5h10v9h5v11h-7v6H39v-6h-7v-11h5v-9h10z"/>
+    <path fill="#77a3fa" d="M48 92h34v4h10v8H38v-8h10z" stroke="none"/>
+    <path fill="#4275e3" d="M29 94h8v7h-4v13h-7v-5h-4v-9h7zm70 0h-8v7h4v13h7v-5h4v-9h-7z"/>
+    <path fill="#416bce" d="M43 113h15v10H43zm26 0h16v10H69z"/>
+    <path fill="none" stroke="#d9fcff" stroke-width="3" stroke-linecap="square" d="m57 101 4 3-4 3m9 1h6"/>
+  </g>
+</svg>
