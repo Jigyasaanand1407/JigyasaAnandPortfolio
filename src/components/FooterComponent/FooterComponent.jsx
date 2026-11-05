@@ -109,7 +109,7 @@ const FooterComponent = () => {
         <div className=" d-block d-md-flex justify-content-between">
           <p className="mb-0"> © 2026 Jigyasa Anand </p>
           <p className="mb-0">New Delhi, India ·  interfacedecoded.in </p>
-          <p className="mb-0">Back to top ↑</p>
+          <a className="mb-0 text-decoration-none" href="#">Back to top ↑</a>
         </div>
       </div>
     </div>

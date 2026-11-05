@@ -4,6 +4,8 @@ import Healtthcare from "../../assets/project-images/Healthcare-web.svg"
 import Kph from "../../assets/project-images/Kph-web.svg"
 import Pantasign from "../../assets/project-images/Pantasign.svg"
 import Cheezoo from "../../assets/project-images/Cheezoo.svg"
+import Denora from "../../assets/project-images/Denora.svg"
+import Opus from "../../assets/project-images/Opus.svg"
 
 const ProjectDataInfo = [
   {
@@ -34,6 +36,22 @@ const ProjectDataInfo = [
     date: "Aug 31, 2026",
     projectName: "Pantsign: Digital Signature Flow Redesig",
     imgUrl: Pantasign,
+    technology: "Web UI UX Design and Development with React",
+    description: "A complete end-to-end redesign of the user journey for an India-based digital signature platform. The revamped workflow significantly reduces user friction, streamlines document processing, and ensures a secure, compliant, and intuitive signing experience for both individual and enterprise users.",
+    openLink: "View Details",
+  },
+  {
+    date: "Aug 31, 2026",
+    projectName: "Pantsign: Digital Signature Flow Redesig",
+    imgUrl: Denora,
+    technology: "Web UI UX Design and Development with React",
+    description: "A complete end-to-end redesign of the user journey for an India-based digital signature platform. The revamped workflow significantly reduces user friction, streamlines document processing, and ensures a secure, compliant, and intuitive signing experience for both individual and enterprise users.",
+    openLink: "View Details",
+  },
+  {
+    date: "Aug 31, 2026",
+    projectName: "Pantsign: Digital Signature Flow Redesig",
+    imgUrl: Opus,
     technology: "Web UI UX Design and Development with React",
     description: "A complete end-to-end redesign of the user journey for an India-based digital signature platform. The revamped workflow significantly reduces user friction, streamlines document processing, and ensures a secure, compliant, and intuitive signing experience for both individual and enterprise users.",
     openLink: "View Details",
