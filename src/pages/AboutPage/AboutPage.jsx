@@ -1,6 +1,7 @@
 import "./AboutPage.scss";
 import WordHover from "../../components/WordHover/WordHover";
 import myPic from "../../assets/Professional-Pic-JigyasaAnand.png";
+import ProjectDataAboutComponent from "../../components/ProjectDataAboutComponent/ProjectDataAboutComponent";
 
 const AboutPage = () => {
   return (
@@ -88,6 +89,7 @@ const AboutPage = () => {
           </div>
         </div>
       </div>
+      <ProjectDataAboutComponent />
     </div>
   );
 };

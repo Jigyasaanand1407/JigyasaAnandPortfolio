@@ -107,8 +107,8 @@ const FooterComponent = () => {
           </ul>
         </div>
         <div className=" d-block d-md-flex justify-content-between">
-          <p className="mb-0"> © 2026 Jigyasa Anand </p>
-          <p className="mb-0">New Delhi, India ·  interfacedecoded.in </p>
+          <p className="mb-3 mb-md-0"> © 2026 Jigyasa Anand </p>
+          <p className="mb-3 mb-md-0">New Delhi, India ·  interfacedecoded.in </p>
           <a className="mb-0 text-decoration-none" href="#">Back to top ↑</a>
         </div>
       </div>

@@ -1,0 +1,122 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "num": "01",
+      "date": "JAN 2025 / PRESENT",
+      "title": "Simplifying insurance, one experience at a time.",
+      "category": "INSURANCE",
+      "description": "Designed and developed user interfaces for multiple insurance web and mobile applications, supporting Arabic and English experiences with a focus on usability, responsive layouts and consistent workflows.",
+      "tag": [
+        "UX/UI Design",
+        "Product Design",
+        "HealthTech",
+        "Mobile App",
+        "Web Application"
+      ],
+      "role": "UI/UX + Front-End Development"
+    },
+    {
+      "id": 2,
+      "num": "02",
+      "date": "JUL 2024 / DEC 2024",
+      "title": "Making healthcare experiences more human.",
+      "category": "HEALTHCARE",
+      "description": "Designed healthcare application interfaces across mobile, tablet and web platforms, focusing on different user roles, intuitive navigation and seamless experiences across screen sizes.",
+      "tag": [
+        "Product Design",
+        "Figma",
+        "User Flows",
+        "Responsive Design",
+        "Healthcare UX"
+      ],
+      "role": "UI/UX Designer"
+    },
+    {
+      "id": 3,
+      "num": "03",
+      "date": "UI/UX Designer",
+      "title": "Making digital signatures simple and accessible.",
+      "category": "DIGITAL SIGNATURE",
+      "description": "Designed and developed a user-focused web application for digital signature workflows, translating product requirements into intuitive interfaces and supporting API integration.",
+      "tag": [
+        "UI/UX Design",
+        "Web Development",
+        "API Integration",
+        "HTML & CSS",
+        "React"
+      ],
+      "role": "Design + Development"
+    },
+    {
+      "id": 4,
+      "num": "04",
+      "date": "JUL 2023 / FEB 2024",
+      "title": "Bringing industrial workflows into the digital space.",
+      "category": "INDUSTRIAL TECHNOLOGY",
+      "description": "Designed and developed a web application for the US coating industry, building user-facing interfaces and supporting API integration to connect application workflows.",
+      "tag": [
+        "Web Application",
+        "UI Development",
+        "API Integration",
+        "JavaScript"
+      ],
+      "role": "Design + Development"
+    },
+    {
+      "id": 5,
+      "num": "05",
+      "date": "APR 2023 / AUG 2023",
+      "title": "Turning travel plans into engaging experiences.",
+      "category": "TRAVEL & TOURISM",
+      "description": "Designed a travel agency mobile application with a focus on intuitive navigation, engaging user interfaces and a cohesive visual identity, including the brand logo.",
+      "tag": [
+        "Mobile App Design",
+        "UI/UX",
+        "Visual Identity",
+        "Photoshop",
+        "Adobe xd"
+      ],
+      "role": "UI/UX Designer + Logo Design"
+    },
+    {
+      "id": 6,
+      "num": "06",
+      "date": "FEB 2022 / OCT 2022",
+      "title": "Connecting people with the right photographers.",
+      "category": "PHOTOGRAPHY",
+      "description": "Developed a photography search website and designed its companion mobile application, focusing on intuitive discovery, clear content presentation and a user-friendly browsing experience.",
+      "tag": [
+        "Web Development",
+        "Mobile UI Design",
+        "HTML & CSS",
+        "JavaScript",
+        "React"
+      ],
+      "role": "Front-End Development + Mobile UI Design"
+    },
+    {
+      "id": 7,
+      "num": "07",
+      "date": "JUN 2021 / JAN 2022",
+      "title": "Bringing smarter healthcare to athletes.",
+      "category": "HEALTHCARE / SPORTS",
+      "description": "Developed interfaces for a sports-focused healthcare application, contributing to user-facing functionality and improvements in data-management workflows.",
+      "tag": [
+        "Healthcare Application",
+        "Front-End Development",
+        "React",
+        "JavaScript"
+      ],
+      "role": "Front-End Developer"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "email": "john@example.com",
+      "role": "Admin"
+    }
+  ]
+}
