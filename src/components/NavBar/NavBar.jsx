@@ -116,7 +116,7 @@ const NavBar = () => {
           >
             About
           </div>
-          <div className="item" onClick={() => setIsMenuOpen(false)}>
+          <div className="item" onClick={() => {setIsMenuOpen(false); navigate("/contact")}}>
             Contact
           </div>
         </div>

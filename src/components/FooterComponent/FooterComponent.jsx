@@ -5,9 +5,12 @@ import openArrow from "../../assets/arrow-open.svg";
 import React, { useEffect, useRef } from "react";
 import { useTheme } from "../../hooks/useTheme";
 
+import { useNavigate } from "react-router-dom";
+
 const FooterComponent = () => {
   const interactiveRef = useRef(null);
   const { theme, toggleTheme } = useTheme();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const interBubble = interactiveRef.current;
@@ -78,7 +81,9 @@ const FooterComponent = () => {
               <span className="fw-bold">Our next conversation</span>
             </div>
           </div>
-          <span class="contact-arrow">↗</span>
+          <span class="contact-arrow"  onClick={() => {
+              navigate("/contact");
+            }}>↗</span>
         </div>
         <div className="sec-logo mb-5">
           <img src={Logo} alt="logo" className="footer-logo svg-black" />

@@ -38,7 +38,7 @@ const ProjectDataAboutCardComponent = () => {
   }
   return (
     <div className="process-list-container">
-      <div className="row mb-5">
+      <div className="row">
       {projectData.map((item, index) => {
         return (
           <div key={item.id || index} className={"process-card col-md-6"}>

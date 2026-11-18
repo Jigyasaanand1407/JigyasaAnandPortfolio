@@ -1,0 +1,190 @@
+.sb {
+  /* Theme it by overriding these variables */
+  --sb-bg: #1f3a5f;
+  --sb-bg-hover: #284a78;
+  --sb-fg: #ffffff;
+  --sb-success: #1f8a5b;
+  --sb-error: #c23b3b;
+  --sb-height: 52px;
+  --sb-ease: cubic-bezier(0.65, 0, 0.35, 1);
+
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--sb-height);
+  padding: 0 2rem;
+  border: 0;
+  border-radius: calc(var(--sb-height) / 2);
+  background: var(--sb-bg);
+  color: var(--sb-fg);
+  font: 600 1rem/1 system-ui, sans-serif;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  overflow: hidden;
+  cursor: pointer;
+  transition:
+    width 0.45s var(--sb-ease),
+    padding 0.45s var(--sb-ease),
+    background-color 0.3s ease,
+    transform 0.15s ease,
+    box-shadow 0.3s ease;
+  box-shadow: 0 6px 16px -6px rgba(31, 58, 95, 0.55);
+}
+
+.sb:hover:not(:disabled) {
+  background: var(--sb-bg-hover);
+  box-shadow: 0 10px 22px -8px rgba(31, 58, 95, 0.6);
+}
+
+.sb:active:not(:disabled) {
+  transform: scale(0.97);
+}
+
+.sb:focus-visible {
+  outline: 3px solid var(--sb-bg-hover);
+  outline-offset: 3px;
+}
+
+.sb:disabled {
+  cursor: default;
+}
+
+/* Collapsed (non-idle) states lose the horizontal padding */
+.sb--loading,
+.sb--success,
+.sb--error {
+  padding: 0;
+}
+
+.sb--success {
+  background: var(--sb-success);
+  box-shadow: 0 6px 16px -6px rgba(31, 138, 91, 0.6);
+}
+
+.sb--error {
+  background: var(--sb-error);
+  box-shadow: 0 6px 16px -6px rgba(194, 59, 59, 0.6);
+  animation: sb-shake 0.4s 0.3s both;
+}
+
+/* Label */
+.sb__label {
+  transition: opacity 0.2s ease, transform 0.3s var(--sb-ease);
+}
+
+.sb:not(.sb--idle) .sb__label {
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+/* Icons are stacked in the center and hidden until their state */
+.sb__icon {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  opacity: 0;
+  transform: scale(0.6);
+  transition: opacity 0.2s ease, transform 0.3s var(--sb-ease);
+}
+
+/* Spinner */
+.sb__spinner circle {
+  stroke-dasharray: 38 60;
+  transform-origin: center;
+}
+
+.sb--loading .sb__spinner {
+  opacity: 1;
+  transform: scale(1);
+  transition-delay: 0.25s;
+  animation: sb-spin 0.9s linear infinite;
+}
+
+/* Checkmark draws itself */
+.sb__check path {
+  stroke-dasharray: 22;
+  stroke-dashoffset: 22;
+}
+
+.sb--success .sb__check {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.sb--success .sb__check path {
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 0.4s 0.2s var(--sb-ease);
+}
+
+/* Cross draws itself */
+.sb__cross path {
+  stroke-dasharray: 30;
+  stroke-dashoffset: 30;
+}
+
+.sb--error .sb__cross {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.sb--error .sb__cross path {
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 0.35s 0.2s var(--sb-ease);
+}
+
+@keyframes sb-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes sb-shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-6px); }
+  40%, 80% { transform: translateX(6px); }
+}
+
+/* Screen-reader-only status text */
+.sb__sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sb,
+  .sb__label,
+  .sb__icon,
+  .sb__check path,
+  .sb__cross path {
+    transition-duration: 0.01ms;
+    transition-delay: 0s;
+  }
+  .sb--error {
+    animation: none;
+  }
+  .sb--loading .sb__spinner {
+    animation-duration: 2.5s;
+  }
+}
+.sb__sizer {
+  position: absolute;
+  visibility: hidden;
+  pointer-events: none;
+  padding: 0 2rem;
+  font: inherit;
+  letter-spacing: inherit;
+  white-space: nowrap;
+}
