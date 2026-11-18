@@ -1,3 +1,4 @@
+// projectService.js handles database operations.
 
 import { supabase } from "./supabaseClient";
 
@@ -69,10 +70,7 @@ export const updateProject = async (id, fields) => {
 
 // DELETE: Delete a project
 export const deleteProject = async (id) => {
-  const { error } = await supabase
-    .from("projects")
-    .delete()
-    .eq("id", id);
+  const { error } = await supabase.from("projects").delete().eq("id", id);
 
   if (error) throw error;
 

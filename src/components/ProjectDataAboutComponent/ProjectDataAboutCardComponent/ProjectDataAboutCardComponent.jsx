@@ -24,6 +24,7 @@ const ProjectDataAboutCardComponent = () => {
         setLoading(false);
       }
     };
+
     fetchProjectData();
   }, []);
   // Loading state
@@ -37,9 +38,10 @@ const ProjectDataAboutCardComponent = () => {
   }
   return (
     <div className="process-list-container">
+      <div className="row mb-5">
       {projectData.map((item, index) => {
         return (
-          <div key={item.id || index} className={"process-card"}>
+          <div key={item.id || index} className={"process-card col-md-6"}>
             <div className="d-flex justify-content-between">
               <div className="number">
                 {item.num}-{}
@@ -48,19 +50,24 @@ const ProjectDataAboutCardComponent = () => {
             </div>
 
             <div className=" align-items-center position-relative">
-              <div className="process-name lh-none mb-5 mb-xl-0">
+              <div className="process-name lh-none mb-3 mb-xl-0">
                 {item.title}
               </div>
 
               <div className="process-des">{item.description}</div>
             </div>
             <div className="tags">
-              <div className="tag">{item.tag}</div>
+              {item.tag?.map((tag, tagIndex) => (
+                <div className="tag" key={tagIndex}>
+                  {tag}
+                </div>
+              ))}
             </div>
             <div className="roles">Role: {item.role}</div>
           </div>
         );
       })}
+      </div>
     </div>
   );
 };

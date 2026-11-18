@@ -5,6 +5,7 @@ import ProjectDataAboutComponent from "../../components/ProjectDataAboutComponen
 
 const AboutPage = () => {
   return (
+    <>
     <div className="container-fluid px-5 about-us-page">
       <h1 className="fs-200 fw-bold lh-ultra-tight text-uppercase">
         <WordHover fontWeight={700}> About us</WordHover>
@@ -89,8 +90,12 @@ const AboutPage = () => {
           </div>
         </div>
       </div>
-      <ProjectDataAboutComponent />
     </div>
+      <div className="tech-stack-section">
+      
+      </div>
+      <ProjectDataAboutComponent />
+      </>
   );
 };
 

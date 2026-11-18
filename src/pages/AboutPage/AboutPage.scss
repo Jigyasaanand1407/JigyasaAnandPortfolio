@@ -1,5 +1,6 @@
 .about-us-page {
   margin-bottom: 200px;
+
   .fs-200 {
     font-size: 200px;
     margin-top: 200px;
@@ -50,11 +51,26 @@
           font-size: 20px;
           padding: 10px 0;
           transition: transform 0.3s ease;
-          &:hover{
-            transform: translateX(15px); 
+          &:hover {
+            transform: translateX(15px);
           }
         }
       }
     }
+  }
+}
+.tech-stack-section {
+  height: 100vh;
+  background-image: url("../../assets/tech-component.svg");
+  background-size: cover;
+  background-position: center;
+  @media (max-width: 1366px) {
+    background-image: url("../../assets/tech-component-1366.svg");
+  }
+  @media (max-width: 767px) {
+    background-image: url("../../assets/tech-component-767.svg");
+  }
+  @media (max-width: 400px) {
+    background-image: url("../../assets/tech-component-400.svg");
   }
 }
