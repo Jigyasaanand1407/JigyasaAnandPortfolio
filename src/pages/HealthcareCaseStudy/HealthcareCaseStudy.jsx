@@ -188,63 +188,6 @@ export default function HealthcareCaseStudy() {
         <Img n={8} alt="App features and UI screens" />
       </section>
 
-      {/* Connected services */}
-      <section className="hc-feature hc-wrap hc-reverse">
-        <div className="hc-feature-grid">
-          <div className="hc-feature-copy">
-            <p className="hc-eyebrow">CONNECTED SERVICES</p>
-
-            <h2>Everything you need, in one experience.</h2>
-
-            <p>
-              Explore healthcare services, manage appointments, and access
-              essential information through intuitive, easy-to-use screens.
-            </p>
-          </div>
-
-          <div className="hc-feature-visual">
-            <Img n={7} alt="Healthcare service app mockup" />
-          </div>
-        </div>
-      </section>
-
-      {/* UI gallery */}
-      <section className="hc-ui-gallery hc-wrap">
-        <Img n={8} alt="Healthcare app interface details" />
-        <Img n={9} alt="Healthcare UI cards and components" />
-      </section>
-
-      {/* Lifestyle mockup */}
-      <section className="hc-fullbleed hc-photo">
-        <Img n={10} alt="Healthcare app lifestyle mockup" />
-      </section>
-
-      {/* Patient-centered care */}
-      <section className="hc-feature hc-wrap">
-        <div className="hc-feature-grid">
-          <div className="hc-feature-visual">
-            <Img n={11} alt="Patient-centered care mobile screens" />
-          </div>
-
-          <div className="hc-feature-copy">
-            <p className="hc-eyebrow">PATIENT-CENTERED CARE</p>
-
-            <h2>Designed around people, not processes.</h2>
-
-            <p>
-              Reduce friction and make care journeys feel more human through
-              thoughtful content, clear hierarchy, and friendly interactions.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Design system */}
-      <section className="hc-design-system hc-wrap">
-        <Img n={12} alt="Healthcare app design system and UI components" />
-        <Img n={13} alt="Healthcare app color palette and typography" />
-        <Img n={14} alt="Closing portfolio thank-you visual" />
-      </section>
 
       {/* Footer */}
       <footer className="hc-footer">
