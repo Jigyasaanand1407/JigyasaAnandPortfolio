@@ -10,6 +10,7 @@ import CaseStudyPage from "./pages/CaseStudyPage/CaseStudyPage";
 import AboutPage from "./pages/AboutPage/AboutPage";
 import ProjectDetailPage from "./pages/ProjectDetailPage/ProjectDetailPage";
 import ContactPage from "./pages/ContactPage/ContactPage";
+import HealthcareCaseStudy from "./pages/HealthcareCaseStudy/HealthcareCaseStudy";
 
 gsap.registerPlugin(useGSAP);
 
@@ -48,6 +49,7 @@ function App() {
             <Route path="/aboutUs" element={<AboutPage />} />
             <Route path="/work" element={<ProjectDetailPage />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="/healthcare" element={<HealthcareCaseStudy />} />
           </Route>
         </Route>
       </Routes>

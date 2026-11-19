@@ -10,11 +10,17 @@
   --bg-btn-white: #ffffff38;
   --text-sec: #f5f5f5;
   --bg-trans-white: transparent;
+   --hc-purple: #857dcf;
+  --hc-ink: #ffffff;
+  --hc-soft: #f3f3f1;
+  --hc-white: #0a0a0c;
+  --gradient-bg: linear-gradient(180deg, #000000 59.13%, #161616 100%);
+  --scope-card-bg: #121212;
 }
 
 /* 2. Light Theme (Only applies when toggled to light) */
 [data-theme="light"] {
-  --bg-primary: #f4f4f2; /* Off-white background */
+  --bg-primary: #fff; /* Off-white background */
   --bg-surface: #ffffff; /* Card / Section background */
   --text-main: #0d0d0d; /* Almost black text */
   --text-muted: #727272; /* Subtitles / secondary text */
@@ -23,7 +29,12 @@
   --bg-btn-white: #b5b5b633;
   --text-sec: #333333;
   --bg-trans-white: #fff;
-  
+   --hc-purple: #857dcf;
+  --hc-ink: #111;
+  --hc-soft: #f3f3f1;
+  --hc-white: #fff;
+  --gradient-bg: linear-gradient(180deg, #ffffff 59.13%, #f2f2f2 100%);
+  --scope-card-bg: #F1F1F1;
 }
 
 // 2. Import Bootstrap's source SCSS
