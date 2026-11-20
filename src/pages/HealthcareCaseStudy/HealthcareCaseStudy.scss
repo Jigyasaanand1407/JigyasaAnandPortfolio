@@ -197,7 +197,7 @@
     place-items: center;
     p {
       margin: 0;
-      font-size: 14px;
+      // font-size: 14px;
     }
   }
   @media (max-width: 900px) {
@@ -464,8 +464,7 @@ html[data-theme="light"] {
     align-items: center;
     padding: clamp(24px, 3.5vw, 40px);
     border-radius: clamp(24px, 3.5vw, 55px);
-        color: var(--text-main);
-
+    color: var(--text-main);
     height: 100%;
   }
   .color-row {

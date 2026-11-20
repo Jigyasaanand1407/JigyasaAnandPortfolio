@@ -306,7 +306,7 @@ export default function HealthcareCaseStudy() {
       </section>
       {/* Footer */}
       <footer className="hc-footer">
-        <p>Thanks for viewing!</p>
+        <p className="fs-36 fw-bold">Thanks for viewing!</p>
       </footer>
     </main>
   );
