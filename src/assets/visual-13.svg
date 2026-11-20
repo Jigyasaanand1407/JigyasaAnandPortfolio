@@ -1,0 +1,39 @@
+<svg width="374" height="656" viewBox="0 0 374 656" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_204_31862)">
+<mask id="mask0_204_31862" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="374" height="656">
+<path d="M374 0H0V656H374V0Z" fill="white"/>
+</mask>
+<g mask="url(#mask0_204_31862)">
+<path d="M374 0H0V656H374V0Z" fill="white"/>
+<path d="M93.5983 0H0V109.333H93.5983V0Z" fill="#88B9FF"/>
+<path d="M186.804 0H93.5986V109.333H186.804V0Z" fill="#FF9696"/>
+<path d="M280.402 0H186.804V109.333H280.402V0Z" fill="#7D83FF"/>
+<path d="M374 0H280.401V109.333H374V0Z" fill="#00033E"/>
+<path opacity="0.8" d="M93.5983 109.333H0V218.666H93.5983V109.333Z" fill="#88B9FF"/>
+<path opacity="0.8" d="M186.804 109.333H93.5986V218.666H186.804V109.333Z" fill="#FF9696"/>
+<path opacity="0.8" d="M280.402 109.333H186.804V218.666H280.402V109.333Z" fill="#7D83FF"/>
+<path opacity="0.8" d="M374 109.333H280.401V218.666H374V109.333Z" fill="#00033E"/>
+<path opacity="0.6" d="M93.5983 218.667H0V328H93.5983V218.667Z" fill="#88B9FF"/>
+<path opacity="0.6" d="M186.804 218.667H93.5986V328H186.804V218.667Z" fill="#FF9696"/>
+<path opacity="0.6" d="M280.402 218.667H186.804V328H280.402V218.667Z" fill="#7D83FF"/>
+<path opacity="0.6" d="M374 218.667H280.401V328H374V218.667Z" fill="#00033E"/>
+<path opacity="0.4" d="M93.5983 328H0V437.333H93.5983V328Z" fill="#88B9FF"/>
+<path opacity="0.4" d="M186.804 328H93.5986V437.333H186.804V328Z" fill="#FF9696"/>
+<path opacity="0.4" d="M280.402 328H186.804V437.333H280.402V328Z" fill="#7D83FF"/>
+<path opacity="0.4" d="M374 328H280.401V437.333H374V328Z" fill="#00033E"/>
+<path opacity="0.2" d="M93.5983 437.333H0V546.666H93.5983V437.333Z" fill="#88B9FF"/>
+<path opacity="0.2" d="M186.804 437.333H93.5986V546.666H186.804V437.333Z" fill="#FF9696"/>
+<path opacity="0.2" d="M280.402 437.333H186.804V546.666H280.402V437.333Z" fill="#7D83FF"/>
+<path opacity="0.2" d="M374 437.333H280.401V546.666H374V437.333Z" fill="#00033E"/>
+<path opacity="0.1" d="M93.5983 546.667H0V656H93.5983V546.667Z" fill="#88B9FF"/>
+<path opacity="0.1" d="M186.804 546.667H93.5986V656H186.804V546.667Z" fill="#FF9696"/>
+<path opacity="0.1" d="M280.402 546.667H186.804V656H280.402V546.667Z" fill="#7D83FF"/>
+<path opacity="0.1" d="M374 546.667H280.401V656H374V546.667Z" fill="#00033E"/>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_204_31862">
+<rect width="374" height="656" fill="white"/>
+</clipPath>
+</defs>
+</svg>

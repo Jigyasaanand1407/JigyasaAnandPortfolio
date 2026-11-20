@@ -141,7 +141,7 @@ export default function HealthcareCaseStudy() {
             <Img n={5} alt="Mobile healthcare app interface" />
           </div>
 
-          <div className="hc-feature-copy">
+          <div className="hc-feature-copy p-5 p-md-0">
             <p className="col-pur">PERSONALIZED CARE</p>
 
             <h2>Personalization begins with clarity.</h2>
@@ -155,7 +155,7 @@ export default function HealthcareCaseStudy() {
         </div>
       </section>
       <section className="mx-4">
-        <div className="our-solution row">
+        <div className="our-solution row mx-0">
           <div className="col-md-6">
             <div className="os-text">OUR SOLUTION</div>
             <div className="os-heading">
@@ -172,7 +172,7 @@ export default function HealthcareCaseStudy() {
             </div>
           </div>
         </div>
-        <div className="row my-4">
+        <div className="row row-gap-3 my-4">
           <div className="col-md-6">
             <Img n={6} alt="Mobile healthcare app interface" />
           </div>
@@ -187,8 +187,123 @@ export default function HealthcareCaseStudy() {
       <section className="app-features-sec">
         <Img n={8} alt="App features and UI screens" />
       </section>
+      <section className="app-features-sec">
+        <Img n={9} alt="App features and UI screens" />
+      </section>
+      <section className="mx-4 pcc-sec">
+        <div className="row row-gap-3 my-4">
+          <div className="col-md-6">
+            <div className="pcc-blue py-5 px-2">Patient-Centered Care</div>
+          </div>
 
+          <div className="col-md-6">
+            <div className="pcc-grey">
+              <Img n={10} alt="App features and UI screens" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="sec-logoss">
+        <Img n={11} alt="App features and UI screens" className="svg-black" />
+      </section>
+      <section className="sec-onboarding mx-4">
+        <div className="row">
+          <div className="col-md-6 pb-100">
+            <Img n={12} alt="App features and UI screens" className="h-930 px-4" />
+          </div>
+          <div className="col-md-6 mt-auto pb-200">
+            <div className="hc-feature-copy p-3 p-md-0">
+              <p className="col-pur">PERSONALIZED CARE</p>
 
+              <h2>Personalization begins with clarity.</h2>
+
+              <p>
+                A seamless onboarding experience that shapes Ekaaya around your
+                immediate healthcare needs, connecting you with the right
+                specialists in just a few taps.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="sec-branding m-4">
+        <div className="row row-gap-3">
+          <div className="col-lg-3 col-md-6">
+            <Img
+              n={13}
+              alt="App features and UI screens"
+              className="color-card"
+            />
+          </div>
+          <div className="col-lg-3 col-md-6">
+            <div className="branding-grey d-flex flex-column justify-content-between">
+              <div className="font-up d-flex justify-content-between w-100">
+                <div className="lft">MAIN TYPEFACE</div>
+                <ul className="rt">
+                  <li className="rt-item">ExtraLight</li>
+                  <li className="rt-item">Light</li>
+                  <li className="rt-item">Regular</li>
+                  <li className="rt-item">Medium</li>
+                  <li className="rt-item">Semibold</li>
+                  <li className="rt-item">Bold</li>
+                  <li className="rt-item">Extra Bold</li>
+                  <li className="rt-item">Black</li>
+                </ul>
+              </div>
+              <div className="font-down w-100 fs-36 fw-bold">Nunito Sans</div>
+            </div>
+          </div>
+          <div className="col-lg-6">
+            <div className="branding-blue">
+              AaBbCc <br /> 0123456789 <br /> !@#$&*?
+            </div>
+          </div>
+          <div className="col-lg-12">
+            <div className="row color-row mx-0">
+              <div className="col white-col">
+                <ul className="color-detail">
+                  <li className="cd-item">#ffffff</li>
+                  <li className="cd-item">R 00</li>
+                  <li className="cd-item">G 00</li>
+                  <li className="cd-item">B 00</li>
+                </ul>
+              </div>
+              <div className="col blue-col">
+                <ul className="color-detail">
+                  <li className="cd-item">#8bb8fb</li>
+                  <li className="cd-item">R 138</li>
+                  <li className="cd-item">G 185</li>
+                  <li className="cd-item">B 255</li>
+                </ul>
+              </div>
+              <div className="col peach-col">
+                <ul className="color-detail">
+                  <li className="cd-item">#fc9696</li>
+                  <li className="cd-item">R 255</li>
+                  <li className="cd-item">G 150</li>
+                  <li className="cd-item">B 150</li>
+                </ul>
+              </div>
+              <div className="col lavender-col">
+                <ul className="color-detail">
+                  <li className="cd-item">#7e80fa</li>
+                  <li className="cd-item">R 125</li>
+                  <li className="cd-item">G 131</li>
+                  <li className="cd-item">B 255</li>
+                </ul>
+              </div>
+              <div className="col purple-col">
+                <ul className="color-detail">
+                  <li className="cd-item">#02013c</li>
+                  <li className="cd-item">R 00</li>
+                  <li className="cd-item">G 03</li>
+                  <li className="cd-item">B 62</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       {/* Footer */}
       <footer className="hc-footer">
         <p>Thanks for viewing!</p>

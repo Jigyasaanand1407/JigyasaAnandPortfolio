@@ -1,3 +1,25 @@
+//color's
+.white-col {
+  background-color: #fff;
+  color: #000;
+}
+.blue-col {
+  background-color: #8bb8fb;
+  color: #fff;
+}
+.peach-col {
+  background-color: #fc9696;
+  color: #fff;
+}
+.lavender-col {
+  background-color: #7e80fa;
+  color: #fff;
+}
+.purple-col {
+  background-color: #02013c;
+  color: #fff;
+}
+
 .hc-case {
   color: var(--hc-ink);
   font-family: inherit;
@@ -15,7 +37,7 @@
     margin-inline: auto;
   }
   .hc-eyebrow {
-    font-size: clamp(16px, 0.8vw, 24px);
+    font-size: clamp(14px, 0.8vw, 24px);
     letter-spacing: 0%;
     text-transform: uppercase;
     font-weight: 600;
@@ -25,8 +47,8 @@
     width: fit-content;
   }
   .hc-hero {
-    min-height: clamp(620px, 82vw, 1120px);
-    padding: clamp(48px, 7vw, 112px) 0 0;
+    min-height: clamp(800px, 82vw, 190px);
+    padding: 250px 0 0;
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -47,22 +69,22 @@
     margin: 0 0 24px;
   }
   .hc-lead {
-    font-size: clamp(15px, 1.3vw, 20px);
+    font-size: clamp(15px, 1.3vw, 32px);
     line-height: 1.55;
-    max-width: 800px;
+    max-width: 810px;
     color: #555;
   }
   .hc-tags {
     display: flex;
     flex-wrap: wrap;
-    max-width: 600px;
+    max-width: 630px;
     gap: 8px;
     margin-top: 24px;
     span {
       border: 1px solid #e1e1e1;
       border-radius: 99px;
       padding: 8px 14px;
-      font-size: 12px;
+      font-size: 16px;
     }
   }
   .hc-hero-art {
@@ -212,7 +234,7 @@
       width: calc(100% - 28px);
     }
     .hc-hero {
-      padding-top: 44px;
+      padding-top: 140px;
     }
     .hc-eyebrow {
       margin-bottom: 14px;
@@ -326,15 +348,15 @@ html[data-theme="light"] {
   padding: 60px 0;
   .hc-feature-copy {
     h2 {
-      font-size: 64px;
+      font-size: clamp(26px, 3.5vw, 64px);
       font-weight: 500;
     }
   }
 }
 .our-solution {
   background-color: var(--scope-card-bg);
-  padding: 50px;
-  border-radius: 55px;
+  padding: clamp(20px, 3.5vw, 50px);
+  border-radius: clamp(24px, 3.5vw, 55px);
   .os-text {
     color: var(--hc-purple) !important;
     line-height: 1.6;
@@ -352,5 +374,117 @@ html[data-theme="light"] {
   .os-des {
     font-size: clamp(15px, 1.2vw, 30px);
     line-height: 1.6;
+  }
+}
+.pcc-sec {
+  .pcc-blue {
+    background-color: #2f2f66;
+    color: #fff;
+    font-size: clamp(26px, 3.5vw, 80px);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    border-radius: clamp(24px, 3.5vw, 55px);
+  }
+  .pcc-grey {
+    background-color: var(--scope-card-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: clamp(24px, 3.5vw, 90px);
+    border-radius: clamp(24px, 3.5vw, 55px);
+    img {
+      max-height: 850px;
+    }
+  }
+}
+.sec-logoss {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    max-height: 202px;
+    padding: 0 24px;
+  }
+}
+.sec-onboarding {
+  background-color: var(--scope-card-bg);
+  border-radius: clamp(24px, 3.5vw, 55px);
+  .h-930 {
+    height: 800px;
+    @media (max-width: 1026px) {
+      height: 600px;
+    }
+    @media (max-width: 888px) {
+      height: 400px;
+    }
+  }
+  .pb-100 {
+    padding-bottom: 140px;
+    @media (max-width: 1026px) {
+      padding-bottom: 100px;
+    }
+    @media (max-width: 888px) {
+      padding-bottom: 60px;
+    }
+  }
+  .pb-200 {
+    padding-bottom: 200px;
+    @media (max-width: 1026px) {
+      padding-bottom: 100px;
+    }
+    @media (max-width: 888px) {
+      padding-bottom: 60px;
+    }
+  }
+}
+.sec-branding {
+  .color-card {
+    border-radius: clamp(24px, 3.5vw, 55px);
+  }
+  .branding-blue {
+    background-color: #2f2f66;
+    color: #fff;
+    font-size: clamp(26px, 3.5vw, 80px);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    border-radius: clamp(24px, 3.5vw, 55px);
+    padding: 40px;
+  }
+  .branding-grey {
+    background-color: var(--scope-card-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: clamp(24px, 3.5vw, 40px);
+    border-radius: clamp(24px, 3.5vw, 55px);
+        color: var(--text-main);
+
+    height: 100%;
+  }
+  .color-row {
+    border-radius: clamp(24px, 3.5vw, 55px);
+    min-height: 500px;
+    overflow: clip;
+    border: 1px solid #c4c4c4;
+    .col {
+      display: flex;
+      align-items: end;
+      padding: clamp(24px, 3.5vw, 40px);
+      font-size: 24px;
+    }
+    .color-detail {
+      padding-left: 0;
+      margin-bottom: 0;
+      .cd-item {
+        list-style-type: none;
+      }
+    }
   }
 }
