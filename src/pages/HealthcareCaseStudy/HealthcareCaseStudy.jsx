@@ -1,9 +1,8 @@
-import React from "react";
 import "./HealthcareCaseStudy.scss";
 
 // Automatically import images from src/assets
 const imageModules = import.meta.glob(
-  "../../assets/visual-*.{png,jpg,jpeg,webp,svg}",
+  "../../assets/case-study/healthcare/visual-*.{png,jpg,jpeg,webp,svg}",
   {
     eager: true,
     query: "?url",
@@ -204,12 +203,16 @@ export default function HealthcareCaseStudy() {
         </div>
       </section>
       <section className="sec-logoss">
-        <Img n={11} alt="App features and UI screens" className="svg-black" />
+        <Img n={11} alt="App features and UI screens" className="" />
       </section>
       <section className="sec-onboarding mx-4">
         <div className="row">
           <div className="col-md-6 pb-100">
-            <Img n={12} alt="App features and UI screens" className="h-930 px-4" />
+            <Img
+              n={12}
+              alt="App features and UI screens"
+              className="h-930 px-4"
+            />
           </div>
           <div className="col-md-6 mt-auto pb-200">
             <div className="hc-feature-copy p-3 p-md-0">
