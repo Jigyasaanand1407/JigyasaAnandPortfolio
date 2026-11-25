@@ -1,0 +1,727 @@
+// ==========================================================================
+// Components Library - Platforms Code Case Study — Responsive SCSS
+// Syncs automatically with :root[data-theme="light" | "dark"]
+// ==========================================================================
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap');
+
+.pl-ds-root {
+  // Default (Dark Mode — matches useTheme fallback)
+  --pl-bg-page: #0B0F19;
+  --pl-bg-surface: #111827;
+  --pl-bg-subtle: #1E293B;
+  --pl-text-primary: #F8FAFC;
+  --pl-text-secondary: #CBD5E1;
+  --pl-text-muted: #94A3B8;
+  --pl-border: #1E293B;
+  --pl-forest: #1F4A2C;
+  --pl-forest-light: #2D6A40;
+  --pl-accent: #4ADE80;
+  --pl-accent-soft: rgba(74, 222, 128, 0.14);
+  --pl-danger: #C92A2A;
+  --pl-danger-soft: rgba(201, 42, 42, 0.16);
+  --pl-canvas-light: #F4F5F7;
+  --pl-shadow-card: 0 10px 30px -10px rgba(0, 0, 0, 0.45);
+  --pl-shadow-mockup: 0 24px 48px -12px rgba(0, 0, 0, 0.65);
+
+  // Sync automatically when <html data-theme="light"> is active
+  :root[data-theme='light'] & {
+    --pl-bg-page: #F4F5F7;
+    --pl-bg-surface: #FFFFFF;
+    --pl-bg-subtle: #EDF0F3;
+    --pl-text-primary: #0F172A;
+    --pl-text-secondary: #475569;
+    --pl-text-muted: #64748B;
+    --pl-border: #DCE1E7;
+    --pl-forest: #1F4A2C;
+    --pl-forest-light: #2B643C;
+    --pl-accent: #1F4A2C;
+    --pl-accent-soft: rgba(31, 74, 44, 0.1);
+    --pl-danger: #B91C1C;
+    --pl-danger-soft: #FEE2E2;
+    --pl-canvas-light: #F4F5F7;
+    --pl-shadow-card: 0 10px 30px -10px rgba(15, 23, 42, 0.08);
+    --pl-shadow-mockup: 0 24px 48px -12px rgba(31, 74, 44, 0.16);
+  }
+
+  display: block;
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 96px; // Clears fixed portfolio navbar
+  background-color: var(--pl-bg-page);
+  color: var(--pl-text-primary);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.6;
+  text-align: left;
+  overflow-x: hidden;
+  transition: background-color 0.25s ease, color 0.25s ease;
+
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: -0.02em;
+    color: var(--pl-text-primary);
+    margin: 0;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  button {
+    font-family: inherit;
+    outline: none;
+  }
+
+  code, .pl-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .pl-container {
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 28px;
+
+    @media (max-width: 768px) {
+      padding: 0 18px;
+    }
+
+    @media (max-width: 480px) {
+      padding: 0 14px;
+    }
+  }
+
+  // ========================================================================
+  // Section 1: Hero & Interactive Figma Canvas Preview
+  // ========================================================================
+  .pl-hero {
+    padding: 36px 0 44px;
+
+    @media (max-width: 768px) {
+      padding: 24px 0 32px;
+    }
+
+    &__grid {
+      display: grid;
+      grid-template-columns: 1.02fr 1.18fr;
+      gap: 40px;
+      align-items: center;
+
+      @media (max-width: 1024px) {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+    }
+
+    &__badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: var(--pl-accent-soft);
+      color: var(--pl-accent);
+      font-size: 12px;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    &__title {
+      font-size: clamp(28px, 3.8vw, 44px);
+      font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: 16px;
+
+      span {
+        color: #4ADE80;
+
+        :root[data-theme='light'] & {
+          color: #1F4A2C;
+        }
+      }
+    }
+
+    &__desc {
+      font-size: 15.5px;
+      line-height: 1.65;
+      color: var(--pl-text-secondary);
+      margin-bottom: 22px;
+    }
+
+    &__tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 24px;
+
+      span {
+        padding: 5px 12px;
+        border-radius: 999px;
+        background: var(--pl-bg-surface);
+        border: 1px solid var(--pl-border);
+        font-size: 12px;
+        font-weight: 500;
+        color: var(--pl-text-secondary);
+      }
+    }
+
+    &__meta {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      padding-top: 20px;
+      border-top: 1px solid var(--pl-border);
+
+      @media (max-width: 520px) {
+        grid-template-columns: 1fr;
+      }
+
+      div {
+        span {
+          display: block;
+          font-size: 11px;
+          text-transform: uppercase;
+          letter-spacing: 0.06em;
+          color: var(--pl-text-muted);
+          margin-bottom: 3px;
+        }
+
+        strong {
+          font-size: 13px;
+          font-weight: 600;
+          color: var(--pl-text-primary);
+        }
+      }
+    }
+  }
+
+  // Figma Workspace Frame (Replicating your actual Figma file UI)
+  .pl-figma-window {
+    background: var(--pl-bg-surface);
+    border-radius: 20px;
+    border: 1px solid var(--pl-border);
+    overflow: hidden;
+    box-shadow: var(--pl-shadow-mockup);
+
+    &__topbar {
+      background: #1E1E1E;
+      color: #E2E8F0;
+      padding: 10px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+      font-size: 12px;
+
+      .pl-file-title {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-weight: 600;
+
+        i {
+          width: 9px;
+          height: 9px;
+          border-radius: 50%;
+          background: #4ADE80;
+          display: inline-block;
+        }
+      }
+
+      .pl-surface-toggle {
+        display: flex;
+        background: rgba(255, 255, 255, 0.1);
+        padding: 3px;
+        border-radius: 7px;
+
+        button {
+          border: none;
+          background: transparent;
+          color: #CBD5E1;
+          font-size: 11px;
+          font-weight: 600;
+          padding: 4px 10px;
+          border-radius: 5px;
+          cursor: pointer;
+
+          &.is-active {
+            background: #1F4A2C;
+            color: #FFFFFF;
+          }
+        }
+      }
+    }
+
+    &__workspace {
+      display: grid;
+      grid-template-columns: 195px 1fr;
+      min-height: 360px;
+
+      @media (max-width: 680px) {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    &__pages {
+      background: var(--pl-bg-surface);
+      border-right: 1px solid var(--pl-border);
+      padding: 12px 10px;
+      max-height: 380px;
+      overflow-y: auto;
+
+      @media (max-width: 680px) {
+        border-right: none;
+        border-bottom: 1px solid var(--pl-border);
+        max-height: 150px;
+      }
+
+      .pl-pages-label {
+        font-size: 10.5px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--pl-text-muted);
+        padding: 4px 8px 8px;
+      }
+
+      button {
+        width: 100%;
+        text-align: left;
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        padding: 6px 8px;
+        border-radius: 6px;
+        border: none;
+        background: transparent;
+        color: var(--pl-text-secondary);
+        font-size: 12px;
+        cursor: pointer;
+
+        &.is-active {
+          background: var(--pl-accent-soft);
+          color: var(--pl-accent);
+          font-weight: 600;
+        }
+      }
+    }
+
+    &__canvas {
+      padding: 18px;
+      transition: background-color 0.2s ease;
+
+      &.canvas-light {
+        background: #F4F5F7;
+        color: #0F172A;
+      }
+
+      &.canvas-dark {
+        background: #142E1C;
+        color: #F8FAFC;
+      }
+    }
+  }
+
+  // Forest Green Figma Documentation Banner (Exact match to your screenshot)
+  .pl-doc-banner {
+    background: #1F4A2C;
+    color: #FFFFFF;
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin-bottom: 14px;
+
+    small {
+      display: block;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #A7F3D0;
+      margin-bottom: 2px;
+    }
+
+    h4 {
+      color: #FFFFFF;
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 3px;
+    }
+
+    p {
+      font-size: 11.5px;
+      color: #D1FAE5;
+    }
+  }
+
+  // ========================================================================
+  // Shared Section Wrapper
+  // ========================================================================
+  .pl-section {
+    padding: 48px 0;
+
+    @media (max-width: 768px) {
+      padding: 34px 0;
+    }
+
+    &__head {
+      max-width: 740px;
+      margin-bottom: 28px;
+
+      .pl-kicker {
+        font-size: 11.5px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--pl-accent);
+        margin-bottom: 6px;
+      }
+
+      h2 {
+        font-size: clamp(22px, 3vw, 30px);
+        font-weight: 700;
+        margin-bottom: 8px;
+      }
+
+      p {
+        font-size: 14.5px;
+        color: var(--pl-text-secondary);
+      }
+    }
+  }
+
+  // ========================================================================
+  // Section 2: Component Matrix & Architecture Cards
+  // ========================================================================
+  .pl-cards-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+
+    @media (max-width: 1024px) {
+      grid-template-columns: 1fr;
+    }
+
+    .pl-info-card {
+      background: var(--pl-bg-surface);
+      border: 1px solid var(--pl-border);
+      border-radius: 18px;
+      padding: 22px;
+      box-shadow: var(--pl-shadow-card);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      .pl-tag {
+        display: inline-block;
+        width: fit-content;
+        font-size: 11px;
+        font-weight: 700;
+        padding: 4px 10px;
+        border-radius: 8px;
+        background: var(--pl-accent-soft);
+        color: var(--pl-accent);
+      }
+
+      h3 {
+        font-size: 17px;
+      }
+
+      p {
+        font-size: 13.5px;
+        color: var(--pl-text-secondary);
+      }
+
+      .pl-layer-tree {
+        background: var(--pl-bg-subtle);
+        border: 1px solid var(--pl-border);
+        border-radius: 10px;
+        padding: 10px 12px;
+        font-size: 12px;
+        color: var(--pl-text-primary);
+      }
+    }
+  }
+
+  // ========================================================================
+  // Section 3: Full 20+ Component Inventory Index
+  // ========================================================================
+  .pl-inventory-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+    gap: 12px;
+
+    .pl-comp-item {
+      background: var(--pl-bg-surface);
+      border: 1px solid var(--pl-border);
+      border-radius: 12px;
+      padding: 12px 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      box-shadow: var(--pl-shadow-card);
+
+      span {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--pl-text-primary);
+      }
+
+      small {
+        font-size: 11px;
+        color: var(--pl-accent);
+        background: var(--pl-accent-soft);
+        padding: 2px 7px;
+        border-radius: 6px;
+      }
+    }
+  }
+
+  // ========================================================================
+  // Section 4: Interactive Button Matrix & Spec Inspector
+  // ========================================================================
+  .pl-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+
+    @media (max-width: 768px) {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      padding-bottom: 6px;
+    }
+
+    .pl-tab {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 15px;
+      border-radius: 12px;
+      border: 1px solid var(--pl-border);
+      background: var(--pl-bg-surface);
+      color: var(--pl-text-secondary);
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      white-space: nowrap;
+      flex-shrink: 0;
+
+      &.is-active {
+        background: #1F4A2C;
+        color: #FFFFFF;
+        border-color: #1F4A2C;
+      }
+    }
+  }
+
+  .pl-workbench {
+    background: var(--pl-bg-surface);
+    border: 1px solid var(--pl-border);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--pl-shadow-mockup);
+
+    &__head {
+      padding: 16px 22px;
+      background: var(--pl-bg-subtle);
+      border-bottom: 1px solid var(--pl-border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+
+      h3 {
+        font-size: 16px;
+      }
+
+      p {
+        font-size: 13px;
+        color: var(--pl-text-secondary);
+      }
+
+      .pl-pill-tag {
+        font-size: 11px;
+        font-weight: 600;
+        padding: 4px 10px;
+        border-radius: 8px;
+        background: var(--pl-bg-surface);
+        border: 1px solid var(--pl-border);
+        color: var(--pl-text-muted);
+      }
+    }
+
+    &__body {
+      padding: 24px;
+
+      @media (max-width: 480px) {
+        padding: 16px;
+      }
+    }
+  }
+
+  .pl-sandbox-grid {
+    display: grid;
+    grid-template-columns: 1.25fr 1fr;
+    gap: 20px;
+
+    @media (max-width: 1024px) {
+      grid-template-columns: 1fr;
+    }
+
+    .pl-stage {
+      border-radius: 16px;
+      padding: 28px 20px;
+      border: 1px dashed var(--pl-border);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      min-height: 250px;
+      transition: background-color 0.2s ease;
+
+      &.stage-light {
+        background: #F4F5F7;
+        color: #0F172A;
+      }
+
+      &.stage-dark {
+        background: #142E1C;
+        color: #F8FAFC;
+      }
+    }
+
+    .pl-controls {
+      border: 1px solid var(--pl-border);
+      border-radius: 16px;
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+  }
+
+  // Authentic Button Styles matching your Figma Matrix
+  .pl-sys-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    border: 1.5px solid transparent;
+    transition: all 0.15s ease;
+    white-space: nowrap;
+
+    &--sm { padding: 6px 12px; font-size: 12px; }
+    &--md { padding: 9px 16px; font-size: 13px; }
+    &--lg { padding: 12px 22px; font-size: 14.5px; }
+
+    &--primary {
+      background: #1F4A2C;
+      color: #FFFFFF;
+      &:hover:not(:disabled) { background: #2B643C; }
+    }
+
+    &--outline {
+      background: transparent;
+      border-color: #1F4A2C;
+      color: #1F4A2C;
+
+      .stage-dark & {
+        border-color: #86EFAC;
+        color: #86EFAC;
+      }
+    }
+
+    &--ghost {
+      background: rgba(31, 74, 44, 0.1);
+      color: #1F4A2C;
+
+      .stage-dark & {
+        background: rgba(255, 255, 255, 0.12);
+        color: #FFFFFF;
+      }
+    }
+
+    &--danger {
+      background: #C92A2A;
+      color: #FFFFFF;
+      &:hover:not(:disabled) { background: #A61E1E; }
+    }
+
+    &:disabled {
+      opacity: 0.42;
+      cursor: not-allowed;
+    }
+  }
+
+  .pl-ctrl-btn {
+    padding: 6px 11px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    border: 1px solid var(--pl-border);
+    background: var(--pl-bg-surface);
+    color: var(--pl-text-primary);
+
+    &.is-selected {
+      background: #1F4A2C;
+      color: #FFFFFF;
+      border-color: #1F4A2C;
+    }
+  }
+
+  .pl-table-wrap {
+    width: 100%;
+    overflow-x: auto;
+    border: 1px solid var(--pl-border);
+    border-radius: 12px;
+
+    table {
+      width: 100%;
+      min-width: 560px;
+      border-collapse: collapse;
+      font-size: 13px;
+
+      th {
+        text-align: left;
+        padding: 10px 14px;
+        background: var(--pl-bg-subtle);
+        color: var(--pl-text-muted);
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+      }
+
+      td {
+        padding: 11px 14px;
+        border-top: 1px solid var(--pl-border);
+        color: var(--pl-text-primary);
+      }
+    }
+  }
+
+  .pl-footer {
+    margin-top: 40px;
+    padding: 32px 0;
+    border-top: 1px solid var(--pl-border);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 13px;
+    color: var(--pl-text-muted);
+  }
+}

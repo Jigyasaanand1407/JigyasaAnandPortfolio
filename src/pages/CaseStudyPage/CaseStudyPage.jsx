@@ -99,16 +99,21 @@ import { useParams } from "react-router-dom";
 import "./CaseStudyPage.scss";
 
 const HealthcareCaseStudy = lazy(() => import("../HealthcareCaseStudy/HealthcareCaseStudy"));
-const CheckoutCaseStudy = lazy(() => import("../CheckoutCaseStudy/CheckoutCaseStudy"));
+const KPHHealthcareCaseStudy = lazy(() => import("../KPHHealthcareCaseStudy/KPHHealthcareCaseStudy"));
+const DesignSystemCaseStudy = lazy(() => import("../DesignSystemCaseStudy/DesignSystemCaseStudy"));
 
 const caseStudies = {
   healthcare: {
     title: "Patient-First Healthcare",
     Component: HealthcareCaseStudy,
   },
-  checkout: {
+  kph: {
     title: "Checkout Experience",
-    Component: CheckoutCaseStudy,
+    Component: KPHHealthcareCaseStudy,
+  },
+   designsystem: {
+    title: "Checkout Experience",
+    Component: DesignSystemCaseStudy,
   },
 };
 

@@ -33,7 +33,7 @@ export const projectData = [
     bgClassContent: "card-orange",
     bgClasstag: "badge-orange",
     bgClassImg: "card-orange",
-    link: "/projects/checkout",
+    link: "/projects/kph",
   },
   {
     badge: "Web Dev",
@@ -45,7 +45,7 @@ export const projectData = [
     bgClassContent: "card-blue",
     bgClasstag: "badge-blue",
     bgClassImg: "card-blue",
-    link: "/projects/design-system",
+    link: "/projects/designsystem",
   },
   {
     badge: "Web, Mobile & Wearable Dev",
