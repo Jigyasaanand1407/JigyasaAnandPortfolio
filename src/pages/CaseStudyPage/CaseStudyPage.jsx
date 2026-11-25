@@ -98,10 +98,24 @@ import { lazy, Suspense } from "react";
 import { useParams } from "react-router-dom";
 import "./CaseStudyPage.scss";
 
-const HealthcareCaseStudy = lazy(() => import("../HealthcareCaseStudy/HealthcareCaseStudy"));
-const KPHHealthcareCaseStudy = lazy(() => import("../KPHHealthcareCaseStudy/KPHHealthcareCaseStudy"));
-const DesignSystemCaseStudy = lazy(() => import("../DesignSystemCaseStudy/DesignSystemCaseStudy"));
-
+const HealthcareCaseStudy = lazy(
+  () => import("../HealthcareCaseStudy/HealthcareCaseStudy"),
+);
+const KPHHealthcareCaseStudy = lazy(
+  () => import("../KPHHealthcareCaseStudy/KPHHealthcareCaseStudy"),
+);
+const DesignSystemCaseStudy = lazy(
+  () => import("../DesignSystemCaseStudy/DesignSystemCaseStudy"),
+);
+const EkaayaCaseStudy = lazy(
+  () => import("../../components/EkaayaCaseStudy/EkaayaCaseStudy"),
+);
+const CheezooWebCaseStudy = lazy(
+  () => import("../../components/CheezooWebCaseStudy/CheezooWebCaseStudy"),
+);
+const CheezooMobileCaseStudy = lazy(
+  () => import("../../components/CheezooMobileCaseStudy/CheezooMobileCaseStudy"),
+);
 const caseStudies = {
   healthcare: {
     title: "Patient-First Healthcare",
@@ -111,9 +125,21 @@ const caseStudies = {
     title: "Checkout Experience",
     Component: KPHHealthcareCaseStudy,
   },
-   designsystem: {
+  designsystem: {
     title: "Checkout Experience",
     Component: DesignSystemCaseStudy,
+  },
+  ekaaya: {
+    title: "Checkout Experience",
+    Component: EkaayaCaseStudy,
+  },
+  cheezooweb: {
+    title: "Checkout Experience",
+    Component: CheezooWebCaseStudy,
+  },
+  cheezoomobile: {
+    title: "Checkout Experience",
+    Component: CheezooMobileCaseStudy,
   },
 };
 
@@ -129,7 +155,9 @@ const CaseStudyPage = () => {
 
   return (
     <div className="case-study-page">
-      <Suspense fallback={<div className="container py-5">Loading case study...</div>}>
+      <Suspense
+        fallback={<div className="container py-5">Loading case study...</div>}
+      >
         <ProjectComponent title={project.title} />
       </Suspense>
     </div>

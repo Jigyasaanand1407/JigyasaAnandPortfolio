@@ -56,7 +56,7 @@ export const projectData = [
     hoverImage: card4hover,
     bgClassContent: "card-grey",
     bgClassImg: "card-grey",
-    link: "/projects/branding",
+    link: "/projects/ekaaya",
   },
   {
     badge: "UI/UX Design / Workflow Optimization",
@@ -68,6 +68,6 @@ export const projectData = [
     bgClassContent: "card-green",
     bgClasstag: "badge-green",
     bgClassImg: "card-green",
-    link: "/projects/digital-product",
+    link: "/projects/cheezooweb",
   },
 ];

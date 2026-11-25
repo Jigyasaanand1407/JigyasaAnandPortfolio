@@ -1,0 +1,426 @@
+// ==========================================================================
+// KPH-Structured Case Study Styles (Dark-Mode Portfolio Integration)
+// ==========================================================================
+
+$container-width: 68rem; // 1088px — ideal editorial reading width
+$bg-canvas:       #09090b;
+$bg-alt:          #0d0d10;
+$bg-card:         #121216;
+$border-subtle:   rgba(255, 255, 255, 0.09);
+$border-strong:   rgba(255, 255, 255, 0.18);
+
+$text-primary:    #fafafa;
+$text-secondary:  #a1a1aa;
+$text-muted:      #71717a;
+
+@mixin container {
+  max-width: $container-width;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+
+  @media (min-width: 768px) {
+    padding-inline: 2rem;
+  }
+}
+
+.kph-case-study {
+  min-height: 100vh;
+  background-color: $bg-canvas;
+  color: $text-primary;
+  padding-top: 5.5rem; // Clears your existing top site header
+
+  &.theme-ekaaya {
+    --accent: #3b82f6;
+    --accent-soft: rgba(59, 130, 246, 0.14);
+    --accent-text: #93c5fd;
+    --accent-border: rgba(59, 130, 246, 0.35);
+  }
+
+  &.theme-cheezoo {
+    --accent: #fafafa;
+    --accent-soft: rgba(255, 255, 255, 0.08);
+    --accent-text: #e4e4e7;
+    --accent-border: rgba(255, 255, 255, 0.24);
+  }
+}
+
+// Top Back Bar
+.kph-topbar {
+  border-bottom: 1px solid $border-subtle;
+  padding-block: 1rem;
+
+  &__inner {
+    @include container;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__tag {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--accent-text);
+    background: var(--accent-soft);
+    border: 1px solid var(--accent-border);
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+  }
+}
+
+.kph-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: $text-secondary;
+  text-decoration: none;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: $text-primary;
+  }
+}
+
+// Hero & Overview
+.kph-hero {
+  padding-block: 3.5rem 4rem;
+  border-bottom: 1px solid $border-subtle;
+
+  &__header {
+    margin-bottom: 2.5rem;
+  }
+
+  &__title {
+    font-size: clamp(2.5rem, 5vw, 3.75rem);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.08;
+    margin: 0.5rem 0 0.75rem;
+  }
+
+  &__subtitle {
+    font-size: 1.15rem;
+    color: $text-secondary;
+    max-width: 44rem;
+    line-height: 1.6;
+    margin: 0;
+  }
+}
+
+.kph-eyebrow {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent-text);
+}
+
+.kph-overview-grid {
+  display: grid;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.kph-meta-strip {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid $border-subtle;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  &__label {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: $text-muted;
+    margin-bottom: 0.3rem;
+  }
+
+  &__val {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: $text-primary;
+  }
+}
+
+// Sections
+.kph-section {
+  padding-block: 4.5rem;
+  border-bottom: 1px solid $border-subtle;
+
+  &--alt {
+    background-color: $bg-alt;
+  }
+
+  &__head {
+    max-width: 46rem;
+    margin-bottom: 2.5rem;
+  }
+
+  &__title {
+    font-size: clamp(1.65rem, 3vw, 2.15rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin: 0.4rem 0 0.75rem;
+  }
+
+  &__desc {
+    font-size: 1rem;
+    color: $text-secondary;
+    line-height: 1.65;
+    margin: 0;
+  }
+}
+
+.kph-step-num {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent-text);
+}
+
+// Grids
+.kph-grid-2 {
+  display: grid;
+  gap: 1.5rem;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.kph-grid-3 {
+  display: grid;
+  gap: 1.25rem;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.kph-grid-4 {
+  display: grid;
+  gap: 1.25rem;
+
+  @media (min-width: 640px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 960px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+// Cards & Typography
+.kph-card {
+  background-color: $bg-card;
+  border: 1px solid $border-subtle;
+  border-radius: 1rem;
+  padding: 1.65rem;
+
+  &__title {
+    font-size: 1.0625rem;
+    font-weight: 600;
+    color: $text-primary;
+    margin: 0 0 0.5rem;
+  }
+}
+
+.kph-label {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent-text);
+  margin-bottom: 0.6rem;
+}
+
+.kph-text {
+  font-size: 0.925rem;
+  color: $text-secondary;
+  line-height: 1.65;
+  margin: 0;
+
+  &--strong {
+    color: $text-primary;
+    font-weight: 600;
+    margin-bottom: 0.35rem;
+  }
+
+  &--muted {
+    font-size: 0.85rem;
+    color: $text-muted;
+  }
+
+  &--spaced {
+    margin-top: 1rem;
+  }
+}
+
+.kph-pain-card__num {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--accent-text);
+  background: var(--accent-soft);
+  padding: 0.2rem 0.55rem;
+  border-radius: 0.375rem;
+  margin-bottom: 0.85rem;
+}
+
+// Persona Callout
+.kph-persona-box {
+  margin-top: 2rem;
+  background-color: $bg-card;
+  border: 1px solid $border-strong;
+  border-radius: 1rem;
+  padding: 2rem;
+  display: grid;
+  gap: 1.5rem;
+
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+  }
+
+  &__name {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 0 0 0.25rem;
+  }
+
+  &__role {
+    font-size: 0.85rem;
+    color: $text-muted;
+  }
+
+  blockquote {
+    margin: 0;
+    font-size: 1.025rem;
+    font-style: italic;
+    color: $text-primary;
+    line-height: 1.65;
+  }
+}
+
+// Wireframe / Mockup Media Slot
+.kph-wireframe-placeholder {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  background-color: $bg-canvas;
+  border: 1px dashed $border-strong;
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    color: $text-muted;
+    font-size: 0.8125rem;
+    text-align: center;
+    padding: 1rem;
+  }
+}
+
+// Usability Study & Lists
+.kph-study-panel {
+  margin-top: 2rem;
+  background-color: $bg-card;
+  border: 1px solid $border-subtle;
+  border-radius: 1rem;
+  padding: 1.75rem;
+}
+
+.kph-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+
+  li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    font-size: 0.9rem;
+    color: $text-secondary;
+    line-height: 1.55;
+
+    svg {
+      flex-shrink: 0;
+      margin-top: 0.22rem;
+      color: var(--accent-text);
+    }
+  }
+}
+
+.kph-a11y-strip {
+  margin-top: 2.5rem;
+}
+
+// Next Project Footer Banner
+.kph-next-project {
+  margin-top: 3rem;
+  padding: 2rem;
+  background-color: $bg-card;
+  border: 1px solid $border-strong;
+  border-radius: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+
+  &__title {
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin: 0;
+  }
+}
+
+.kph-next-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.35rem;
+  border-radius: 9999px;
+  background-color: $text-primary;
+  color: $bg-canvas;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+
+  &:hover {
+    opacity: 0.9;
+    transform: translateX(2px);
+  }
+}
